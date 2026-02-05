@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>თბილისის ისტორია - რენესანსი</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'antique': {
+                            '50': '#f5e9d8',
+                            '100': '#e8d5bc',
+                            '200': '#d4b89c',
+                            '300': '#b99372',
+                            '400': '#a07052',
+                            '500': '#8b4513',
+                            '600': '#753810',
+                            '700': '#5f2d0d',
+                            '800': '#49220a',
+                            '900': '#2c1810',
+                        }
+                    },
+                    fontFamily: {
+                        'georgian': ['Noto Serif Georgian', 'serif'],
+                        'cinzel': ['Cinzel', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Georgian:wght@400;600;700&family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Serif Georgian', serif;
+            background-color: #f5e9d8;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23a1887f' fill-opacity='0.1' fill-rule='evenodd'/%3E%3C/svg%3E");
+        }
+        
+        .page {
+            display: none;
+        }
+        
+        .active-page {
+            display: block;
+        }
+        
+        .card {
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border: 1px solid #d4b89c;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+        }
+        
+        .nav-link {
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #a52a2a;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover:after {
+            width: 100%;
+        }
+        
+        .antique-border {
+            border: 8px solid transparent;
+            border-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cpath d='M0,0 L100,0 L100,100 L0,100 Z' fill='none' stroke='%238B4513' stroke-width='4' stroke-dasharray='10,5'/%3E%3C/svg%3E") 8 stretch;
+        }
+        
+        /* დროის ხაზის სტილები */
+        .timeline-container {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .timeline-container::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: #8b4513;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+        }
+        
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            width: 50%;
+            box-sizing: border-box;
+        }
+        
+        .timeline-item:nth-child(odd) {
+            left: 0;
+        }
+        
+        .timeline-item:nth-child(even) {
+            left: 50%;
+        }
+        
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            background-color: #f5e9d8;
+            border: 4px solid #8b4513;
+            border-radius: 50%;
+            top: 15px;
+            z-index: 1;
+        }
+        
+        .timeline-item:nth-child(odd)::after {
+            right: -12px;
+        }
+        
+        .timeline-item:nth-child(even)::after {
+            left: -12px;
+        }
+        
+        .timeline-content {
+            padding: 20px;
+            background-color: white;
+            border-radius: 6px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border: 1px solid #d4b89c;
+        }
+        
+        /* მობილურისთვის დროის ხაზი */
+        @media screen and (max-width: 768px) {
+            .timeline-container::after {
+                left: 31px;
+            }
+            
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+            
+            .timeline-item:nth-child(even) {
+                left: 0;
+            }
+            
+            .timeline-item::after {
+                left: 20px;
+            }
+            
+            .timeline-item:nth-child(odd)::after,
+            .timeline-item:nth-child(even)::after {
+                left: 20px;
+            }
+        }
+        
+        /* გალერეის სტილები */
+        .gallery-item {
+            transition: all 0.3s ease;
+            overflow: hidden;
+        }
+        
+        .gallery-item:hover {
+            transform: scale(1.03);
+        }
+        
+        .gallery-img {
+            height: 250px;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .gallery-item:hover .gallery-img {
+            transform: scale(1.1);
+        }
+        
+        /* კონტაქტის ფორმის სტილები */
+        .contact-input {
+            transition: all 0.3s ease;
+            border: 1px solid #d4b89c;
+        }
+        
+        .contact-input:focus {
+            border-color: #8b4513;
+            box-shadow: 0 0 0 3px rgba(139, 69, 19, 0.1);
+        }
+        
+        /* მობილური მენიუს სტილები */
+        .mobile-menu {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        
+        .mobile-menu.open {
+            max-height: 500px;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+    <!-- ნავიგაცია -->
+    <header class="bg-antique-900 text-antique-50 py-4 shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-row justify-between items-center">
+                <!-- ლოგო და სახელი -->
+                <div class="flex items-center">
+                    <i class="fas fa-landmark text-2xl mr-3"></i>
+                    <h1 class="font-cinzel text-xl md:text-2xl font-bold">თბილისის ისტორიული არქივი</h1>
+                </div>
+                
+                <!-- მობილური მენიუს ღილაკი -->
+                <button id="mobile-menu-button" class="md:hidden text-2xl">
+                    <i class="fas fa-bars"></i>
+                </button>
+                
+                <!-- დესკტოპის ნავიგაცია -->
+                <nav class="hidden md:flex space-x-6">
+                    <a href="#" data-page="main" class="nav-link font-medium hover:text-antique-200">მთავარი</a>
+                    <a href="#" data-page="articles" class="nav-link font-medium hover:text-antique-200">სტატიები</a>
+                    <a href="#" data-page="gallery" class="nav-link font-medium hover:text-antique-200">გალერეა</a>
+                    <a href="#" data-page="contact" class="nav-link font-medium hover:text-antique-200">კონტაქტი</a>
+                </nav>
+            </div>
+            
+            <!-- მობილური მენიუ -->
+            <div id="mobile-menu" class="mobile-menu md:hidden">
+                <nav class="flex flex-col space-y-4 mt-4 pb-2">
+                    <a href="#" data-page="main" class="nav-link font-medium hover:text-antique-200 py-2 border-b border-antique-700">მთავარი</a>
+                    <a href="#" data-page="articles" class="nav-link font-medium hover:text-antique-200 py-2 border-b border-antique-700">სტატიები</a>
+                    <a href="#" data-page="gallery" class="nav-link font-medium hover:text-antique-200 py-2 border-b border-antique-700">გალერეა</a>
+                    <a href="#" data-page="contact" class="nav-link font-medium hover:text-antique-200 py-2 border-b border-antique-700">კონტაქტი</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- მთავარი გვერდი -->
+    <div id="main-page" class="page active-page">
+        <main class="container mx-auto px-4 py-8">
+            <!-- გვერდის სათაური -->
+            <div class="text-center mb-12 antique-border p-6 bg-antique-50">
+                <div class="flex justify-center mb-4">
+                    <i class="text-antique-600 fas fa-leaf text-3xl mx-2"></i>
+                    <i class="text-antique-600 fas fa-feather-alt text-3xl mx-2"></i>
+                    <i class="text-antique-600 fas fa-scroll text-3xl mx-2"></i>
+                </div>
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-antique-700">თბილისი XVIII საუკუნეში</h2>
+                <p class="text-lg md:text-xl max-w-3xl mx-auto text-antique-600">გამოიკვლიეთ ქალაქის ცხოვრება რთულ ისტორიულ პერიოდში, როდესაც თბილისი იყო სპარსული, ოსმალური და რუსული იმპერიების გავლენის არენა.</p>
+            </div>
+
+            <!-- სტატიების გრიდი -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+                <!-- სტატია 1 -->
+                <article class="card bg-white rounded-lg overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1580136607984-3c8f54d7c8b0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="ჯვაროსნული ლაშქრობები" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 text-antique-700">
+                            <a href="#" data-page="crusades" class="text-antique-600 hover:text-antique-800 transition-colors">ჯვაროსნული ლაშქრობები</a>
+                        </h3>
+                        <p class="mb-4 text-gray-700">ჯვაროსნული ლაშქრობები იყო შუა საუკუნეების სამხედრო-რელიგიური კამპანიები, რომელთა მიზანი იერუსალიმის დაბრუნება იყო.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm bg-antique-100 text-antique-800 py-1 px-3 rounded-full">1096-1291</span>
+                            <a href="#" data-page="crusades" class="text-antique-600 hover:text-antique-800 font-medium">სრულად ნახვა <i class="fas fa-arrow-right ml-1"></i></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- სტატია 2 - იტალიური რენესანსი -->
+                <article class="card bg-white rounded-lg overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1578301978693-85fa9c0320b9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="იტალიური რენესანსი" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 text-antique-700">
+                            <a href="#" data-page="renaissance" class="text-antique-600 hover:text-antique-800 transition-colors">იტალიური რენესანსი</a>
+                        </h3>
+                        <p class="mb-4 text-gray-700">იტალიური რენესანსი იყო კულტურული მოძრაობა, რომელმაც XIV საუკუნის ბოლოდან XVI საუკუნემდე განაპირობა ევროპის ინტელექტუალური აღორძინება.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm bg-antique-100 text-antique-800 py-1 px-3 rounded-full">1300-1600</span>
+                            <a href="#" data-page="renaissance" class="text-antique-600 hover:text-antique-800 font-medium">სრულად ნახვა <i class="fas fa-arrow-right ml-1"></i></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- სტატია 3 - ქართული რენესანსი -->
+                <article class="card bg-white rounded-lg overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1580136607984-3c8f54d7c8b0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="ქართული რენესანსი" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 text-antique-700">
+                            <a href="#" data-page="georgian-renaissance" class="text-antique-600 hover:text-antique-800 transition-colors">ქართული რენესანსი</a>
+                        </h3>
+                        <p class="mb-4 text-gray-700">ქართული რენესანსი XI-XIII საუკუნეებში განვითარდა, როდესაც საქართველო განიცდიდა პოლიტიკურ, ეკონომიკურ და კულტურულ აღმავლობას.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm bg-antique-100 text-antique-800 py-1 px-3 rounded-full">1000-1300</span>
+                            <a href="#" data-page="georgian-renaissance" class="text-antique-600 hover:text-antique-800 font-medium">სრულად ნახვა <i class="fas fa-arrow-right ml-1"></i></a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- მხარეს ტექსტი -->
+            <div class="bg-antique-50 p-8 rounded-lg shadow-inner mb-12">
+                <h3 class="text-2xl font-bold mb-6 text-center text-antique-700">XVIII საუკუნის თბილისის შესახებ</h3>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <div>
+                        <p class="mb-4 text-gray-700">XVIII საუკუნე თბილისის ისტორიაში ერთ-ერთი ყველაზე რთული პერიოდი იყო. ქალაქი განიცდიდა მუდმივ ომებს, უცხოელთა შემოსევებს და შინააშლილობას.</p>
+                        <p class="mb-4 text-gray-700">ამ პერიოდში თბილისი რამდენჯერმე გადაიქცა სპარსეთისა და ოსმალეთის იმპერიების დაპყრობის არენად. მოსახლეობა მუდმივ საფრთხეში ცხოვრობდა და ქალაქის ეკონომიკა ძლიერ დაზარალდა.</p>
+                    </div>
+                    <div>
+                        <p class="mb-4 text-gray-700">მიუხედავად ყველა სირთულისა, XVIII საუკუნეში თბილისში განვითარდა კულტურული და ინტელექტუალური ცხოვრება. ვახტანგ VI-ის პერიოდში განხორციელებულმა რეფორმებმა დიდი გავლენა მოახდინა ქალაქის განვითარებაზე.</p>
+                        <p class="text-gray-700">საუკუნის ბოლოს თბილისის მოსახლეობა შეადგენდა დაახლოებით 20 000 ადამიანს. ქალაქი იყოფოდა რამდენიმე რაიონად: კალა (ციხე-ქალაქი), სოლოლაკი, ავლაბარი, მთაწმინდა და ისანი.</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- სტატიების გვერდი -->
+    <div id="articles-page" class="page">
+        <main class="container mx-auto px-4 py-8">
+            <button onclick="showPage('main')" class="mb-6 text-antique-600 hover:text-antique-800 font-medium flex items-center">
+                <i class="fas fa-arrow-left mr-2"></i>უკან მთავარ გვერდზე
+            </button>
+            
+            <div class="text-center mb-12 antique-border p-6 bg-antique-50">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-antique-700">ისტორიული სტატიები</h2>
+                <p class="text-lg md:text-xl max-w-3xl mx-auto text-antique-600">შეისწავლეთ სხვადასხვა ისტორიული პერიოდები და მოვლენები</p>
+            </div>
+
+            <!-- ყველა სტატიის ჩამონათვალი -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+                <!-- სტატია 1 -->
+                <article class="card bg-white rounded-lg overflow-hidden">
+                    <div class="p-6">
+                        <span class="text-sm bg-red-100 text-red-800 py-1 px-3 rounded-full mb-4 inline-block">ჯვაროსნული ლაშქრობები</span>
+                        <h3 class="text-xl font-bold mb-3 text-antique-700">პირველი ჯვაროსნული ლაშქრობა</h3>
+                        <p class="mb-4 text-gray-700">პირველი ჯვაროსნული ლაშქრობა დაიწყო 1096 წელს პაპ ურბან II-ის მოწოდებით და დასრულდა 1099 წელს იერუსალიმის აღებით.</p>
+                        <a href="#" data-page="crusades" class="text-antique-600 hover:text-antique-800 font-medium">სრულად ნახვა <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                </article>
+
+                <!-- სტატია 2 -->
+                <article class="card bg-white rounded-lg overflow-hidden">
+                    <div class="p-6">
+                        <span class="text-sm bg-blue-100 text-blue-800 py-1 px-3 rounded-full mb-4 inline-block">იტალიური რენესანსი</span>
+                        <h3 class="text-xl font-bold mb-3 text-antique-700">რენესანსის ხელოვნება</h3>
+                        <p class="mb-4 text-gray-700">რენესანსის პერიოდში ხელოვნებამ მიიღო ახალი ხასიათი, ფოკუსი გადაიტანა ადამიანზე და ბუნებრივ სილამაზეზე.</p>
+                        <a href="#" data-page="renaissance" class="text-antique-600 hover:text-antique-800 font-medium">სრულად ნახვა <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                </article>
+
+                <!-- სტატია 3 -->
+                <article class="card bg-white rounded-lg overflow-hidden">
+                    <div class="p-6">
+                        <span class="text-sm bg-green-100 text-green-800 py-1 px-3 rounded-full mb-4 inline-block">ქართული რენესანსი</span>
+                        <h3 class="text-xl font-bold mb-3 text-antique-700">დავით აღმაშენებელი</h3>
+                        <p class="mb-4 text-gray-700">დავით IV აღმაშენებელი იყო ერთ-ერთი უდიდესი ქართველი მეფე, რომელმაც საქართველო გააერთიანა და გააძლიერა.</p>
+                        <a href="#" data-page="georgian-renaissance" class="text-antique-600 hover:text-antique-800 font-medium">სრულად ნახვა <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                </article>
+                
+                <!-- დამატებითი სტატიები -->
+                <article class="card bg-white rounded-lg overflow-hidden">
+                    <div class="p-6">
+                        <span class="text-sm bg-purple-100 text-purple-800 py-1 px-3 rounded-full mb-4 inline-block">XVIII საუკუნე</span>
+                        <h3 class="text-xl font-bold mb-3 text-antique-700">თბილისი XVIII საუკუნეში</h3>
+                        <p class="mb-4 text-gray-700">როგორ იცვლებოდა თბილისი რთულ პერიოდში, როდესაც იგი სხვადასხვა იმპერიის გავლენის ქვეშ იმყოფებოდა.</p>
+                        <a href="#" data-page="main" class="text-antique-600 hover:text-antique-800 font-medium">სრულად ნახვა <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                </article>
+            </div>
+        </main>
+    </div>
+
+    <!-- გალერეის გვერდი -->
+    <div id="gallery-page" class="page">
+        <main class="container mx-auto px-4 py-8">
+            <button onclick="showPage('main')" class="mb-6 text-antique-600 hover:text-antique-800 font-medium flex items-center">
+                <i class="fas fa-arrow-left mr-2"></i>უკან მთავარ გვერდზე
+            </button>
+            
+            <div class="text-center mb-12 antique-border p-6 bg-antique-50">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-antique-700">ისტორიული გალერეა</h2>
+                <p class="text-lg md:text-xl max-w-3xl mx-auto text-antique-600">თბილისის ისტორიული ფოტოები და ილუსტრაციები</p>
+            </div>
+
+            <!-- გალერეის ფილტრები -->
+            <div class="flex flex-wrap gap-4 mb-8 justify-center">
+                <button class="filter-btn active bg-antique-600 text-white py-2 px-4 rounded-lg transition-colors" data-filter="all">ყველა</button>
+                <button class="filter-btn bg-antique-100 text-antique-800 py-2 px-4 rounded-lg hover:bg-antique-200 transition-colors" data-filter="tbilisi">თბილისი</button>
+                <button class="filter-btn bg-antique-100 text-antique-800 py-2 px-4 rounded-lg hover:bg-antique-200 transition-colors" data-filter="renaissance">რენესანსი</button>
+                <button class="filter-btn bg-antique-100 text-antique-800 py-2 px-4 rounded-lg hover:bg-antique-200 transition-colors" data-filter="crusades">ჯვაროსნული</button>
+            </div>
+
+            <!-- გალერეის გრიდი -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mb-12">
+                <!-- სურათი 1 -->
+                <div class="gallery-item rounded-lg overflow-hidden bg-white shadow-md" data-category="tbilisi">
+                    <img src="https://images.unsplash.com/photo-1593693399746-2d5fd75d5a16?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="ძველი თბილისი" class="gallery-img w-full">
+                    <div class="p-4">
+                        <h4 class="font-bold text-lg mb-2 text-antique-700">ძველი თბილისი</h4>
+                        <p class="text-sm text-gray-600">XIX საუკუნის თბილისის ქუჩა</p>
+                    </div>
+                </div>
+                
+                <!-- სურათი 2 -->
+                <div class="gallery-item rounded-lg overflow-hidden bg-white shadow-md" data-category="renaissance">
+                    <img src="https://images.unsplash.com/photo-1578301978693-85fa9c0320b9?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="რენესანსის ხელოვნება" class="gallery-img w-full">
+                    <div class="p-4">
+                        <h4 class="font-bold text-lg mb-2 text-antique-700">რენესანსის ხელოვნება</h4>
+                        <p class="text-sm text-gray-600">იტალიური რენესანსის პერიოდის ნამუშევარი</p>
+                    </div>
+                </div>
+                
+                <!-- სურათი 3 -->
+                <div class="gallery-item rounded-lg overflow-hidden bg-white shadow-md" data-category="crusades">
+                    <img src="https://images.unsplash.com/photo-1580136607984-3c8f54d7c8b0?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="ჯვაროსნული ლაშქრობა" class="gallery-img w-full">
+                    <div class="p-4">
+                        <h4 class="font-bold text-lg mb-2 text-antique-700">ჯვაროსნული ლაშქრობა</h4>
+                        <p class="text-sm text-gray-600">ჯვაროსნების შეტაკება მუსლიმებთან</p>
+                    </div>
+                </div>
+                
+                <!-- სურათი 4 -->
+                <div class="gallery-item rounded-lg overflow-hidden bg-white shadow-md" data-category="tbilisi">
+                    <img src="https://images.unsplash.com/photo-1620750033020-b2c6e5e1e8d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="თბილისის ციხე" class="gallery-img w-full">
+                    <div class="p-4">
+                        <h4 class="font-bold text-lg mb-2 text-antique-700">თბილისის ციხე</h4>
+                        <p class="text-sm text-gray-600">ნარიყალას ციხე-სიმაგრე</p>
+                    </div>
+                </div>
+                
+                <!-- სურათი 5 -->
+                <div class="gallery-item rounded-lg overflow-hidden bg-white shadow-md" data-category="renaissance">
+                    <img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="რენესანსის არქიტექტურა" class="gallery-img w-full">
+                    <div class="p-4">
+                        <h4 class="font-bold text-lg mb-2 text-antique-700">რენესანსის არქიტექტურა</h4>
+                        <p class="text-sm text-gray-600">ფლორენციის კათედრალი</p>
+                    </div>
+                </div>
+                
+                <!-- სურათი 6 -->
+                <div class="gallery-item rounded-lg overflow-hidden bg-white shadow-md" data-category="crusades">
+                    <img src="https://images.unsplash.com/photo-1578301978693-85fa9c0320b9?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="სალადინი" class="gallery-img w-full">
+                    <div class="p-4">
+                        <h4 class="font-bold text-lg mb-2 text-antique-700">სალადინი</h4>
+                        <p class="text-sm text-gray-600">მუსლიმთა ლიდერი ჯვაროსნული ომების დროს</p>
+                    </div>
+                </div>
+                
+                <!-- სურათი 7 -->
+                <div class="gallery-item rounded-lg overflow-hidden bg-white shadow-md" data-category="tbilisi">
+                    <img src="https://images.unsplash.com/photo-1593693399746-2d5fd75d5a16?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="თბილისის ძველი სახლები" class="gallery-img w-full">
+                    <div class="p-4">
+                        <h4 class="font-bold text-lg mb-2 text-antique-700">თბილისის ძველი სახლები</h4>
+                        <p class="text-sm text-gray-600">ტრადიციული ქართული არქიტექტურა</p>
+                    </div>
+                </div>
+                
+                <!-- სურათი 8 -->
+                <div class="gallery-item rounded-lg overflow-hidden bg-white shadow-md" data-category="renaissance">
+                    <img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="დავინჩი" class="gallery-img w-full">
+                    <div class="p-4">
+                        <h4 class="font-bold text-lg mb-2 text-antique-700">ლეონარდო და ვინჩი</h4>
+                        <p class="text-sm text-gray-600">რენესანსის პერიოდის გენიოსი</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- კონტაქტის გვერდი -->
+    <div id="contact-page" class="page">
+        <main class="container mx-auto px-4 py-8">
+            <button onclick="showPage('main')" class="mb-6 text-antique-600 hover:text-antique-800 font-medium flex items-center">
+                <i class="fas fa-arrow-left mr-2"></i>უკან მთავარ გვერდზე
+            </button>
+            
+            <div class="text-center mb-12 antique-border p-6 bg-antique-50">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-antique-700">კონტაქტი</h2>
+                <p class="text-lg md:text-xl max-w-3xl mx-auto text-antique-600">დაგვიკავშირდით კითხვებით, წინადადებებით თუ თანამშრომლობის შესახებ</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-12">
+                <!-- კონტაქტის ინფორმაცია -->
+                <div>
+                    <h3 class="text-2xl font-bold mb-6 text-antique-700">კონტაქტის ინფორმაცია</h3>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="bg-antique-100 p-3 rounded-lg mr-4">
+                                <i class="fas fa-map-marker-alt text-antique-600 text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg mb-1 text-antique-700">მისამართი</h4>
+                                <p class="text-gray-700">თბილისი, ისტორიული მუზეუმის ქუჩა №5</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-antique-100 p-3 rounded-lg mr-4">
+                                <i class="fas fa-envelope text-antique-600 text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg mb-1 text-antique-700">ელ. ფოსტა</h4>
+                                <p class="text-gray-700">info@tbilisi-history.ge</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-antique-100 p-3 rounded-lg mr-4">
+                                <i class="fas fa-phone text-antique-600 text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg mb-1 text-antique-700">ტელეფონი</h4>
+                                <p class="text-gray-700">+995 32 2 12 34 56</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-antique-100 p-3 rounded-lg mr-4">
+                                <i class="fas fa-clock text-antique-600 text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg mb-1 text-antique-700">სამუშაო საათები</h4>
+                                <p class="text-gray-700">ორშაბათი - პარასკევი: 10:00 - 18:00</p>
+                                <p class="text-gray-700">შაბათი: 10:00 - 16:00</p>
+                                <p class="text-gray-700">კვირა: დასვენების დღე</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- სოციალური ქსელები -->
+                    <div class="mt-8">
+                        <h4 class="font-bold text-lg mb-4 text-antique-700">გამოგვყევით სოციალურ ქსელებში</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="bg-antique-600 text-white p-3 rounded-lg hover:bg-antique-700 transition-colors">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="bg-antique-600 text-white p-3 rounded-lg hover:bg-antique-700 transition-colors">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="bg-antique-600 text-white p-3 rounded-lg hover:bg-antique-700 transition-colors">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="bg-antique-600 text-white p-3 rounded-lg hover:bg-antique-700 transition-colors">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- საკონტაქტო ფორმა -->
+                <div>
+                    <h3 class="text-2xl font-bold mb-6 text-antique-700">დაგვიკავშირდით</h3>
+                    
+                    <form id="contact-form" class="space-y-6">
+                        <div>
+                            <label for="name" class="block mb-2 font-medium text-gray-700">სახელი და გვარი</label>
+                            <input type="text" id="name" class="contact-input w-full p-3 rounded-lg focus:outline-none" required>
+                        </div>
+                        
+                        <div>
+                            <label for="email" class="block mb-2 font-medium text-gray-700">ელ. ფოსტა</label>
+                            <input type="email" id="email" class="contact-input w-full p-3 rounded-lg focus:outline-none" required>
+                        </div>
+                        
+                        <div>
+                            <label for="subject" class="block mb-2 font-medium text-gray-700">თემა</label>
+                            <select id="subject" class="contact-input w-full p-3 rounded-lg focus:outline-none" required>
+                                <option value="">აირჩიეთ თემა</option>
+                                <option value="question">კითხვა</option>
+                                <option value="collaboration">თანამშრომლობა</option>
+                                <option value="suggestion">წინადადება</option>
+                                <option value="other">სხვა</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block mb-2 font-medium text-gray-700">შეტყობინება</label>
+                            <textarea id="message" rows="5" class="contact-input w-full p-3 rounded-lg focus:outline-none" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="bg-antique-600 text-white font-medium py-3 px-6 rounded-lg hover:bg-antique-700 transition-colors w-full">
+                            გაგზავნა
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- ისტორიული თემების გვერდები (ჯვაროსნული ლაშქრობები, რენესანსი, ქართული რენესანსი) -->
+    <!-- ეს გვერდები უკვე გაწერილია თქვენს კოდში, მე დავამატებ მხოლოდ back ღილაკებს -->
+    
+    <!-- ჯვაროსნული ლაშქრობების გვერდი -->
+    <div id="crusades-page" class="page">
+        <main class="container mx-auto px-4 py-8">
+            <button onclick="showPage('articles')" class="mb-6 text-antique-600 hover:text-antique-800 font-medium flex items-center">
+                <i class="fas fa-arrow-left mr-2"></i>უკან სტატიებზე
+            </button>
+            
+            <!-- აქ ჩასვით თქვენი ჯვაროსნული ლაშქრობების გვერდის კონტენტი -->
+            <div class="text-center mb-12 antique-border p-6 bg-antique-50">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-antique-700">ჯვაროსნული ლაშქრობები</h2>
+                <p class="text-lg md:text-xl max-w-3xl mx-auto text-antique-600">XI-XIII საუკუნეების რელიგიური ომები ქრისტიანობისა და ისლამისთვის წმინდა მიწის კონტროლისთვის.</p>
+            </div>
+            
+            <!-- დროის ხაზი და სხვა კონტენტი -->
+            <!-- ... -->
+        </main>
+    </div>
+
+    <!-- იტალიური რენესანსის გვერდი -->
+    <div id="renaissance-page" class="page">
+        <main class="container mx-auto px-4 py-8">
+            <button onclick="showPage('articles')" class="mb-6 text-antique-600 hover:text-antique-800 font-medium flex items-center">
+                <i class="fas fa-arrow-left mr-2"></i>უკან სტატიებზე
+            </button>
+            
+            <!-- აქ ჩასვით თქვენი რენესანსის გვერდის კონტენტი -->
+            <div class="text-center mb-12 antique-border p-6 bg-antique-50">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-antique-700">იტალიური რენესანსი</h2>
+                <p class="text-lg md:text-xl max-w-3xl mx-auto text-antique-600">XIV-XVI საუკუნეების კულტურული აღორძინება</p>
+            </div>
+            
+            <!-- დროის ხაზი და სხვა კონტენტი -->
+            <!-- ... -->
+        </main>
+    </div>
+
+    <!-- ქართული რენესანსის გვერდი -->
+    <div id="georgian-renaissance-page" class="page">
+        <main class="container mx-auto px-4 py-8">
+            <button onclick="showPage('articles')" class="mb-6 text-antique-600 hover:text-antique-800 font-medium flex items-center">
+                <i class="fas fa-arrow-left mr-2"></i>უკან სტატიებზე
+            </button>
+            
+            <!-- აქ ჩასვით თქვენი ქართული რენესანსის გვერდის კონტენტი -->
+            <div class="text-center mb-12 antique-border p-6 bg-antique-50">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-antique-700">ქართული რენესანსი</h2>
+                <p class="text-lg md:text-xl max-w-3xl mx-auto text-antique-600">XI-XIII საუკუნეების ოქროს ხანა</p>
+            </div>
+            
+            <!-- დროის ხაზი და სხვა კონტენტი -->
+            <!-- ... -->
+        </main>
+    </div>
+
+    <!-- ფუტერი -->
+    <footer class="bg-antique-900 text-antique-100 py-8 mt-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h4 class="text-xl font-bold mb-4 font-cinzel">თბილისის ისტორიული არქივი</h4>
+                    <p class="text-antique-200">ჩვენი მიზანია შევინარჩუნოთ და გავავრცელოთ ინფორმაცია თბილისის მდიდარ ისტორიაზე, განსაკუთრებით XVIII საუკუნის რთულ პერიოდზე.</p>
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold mb-4 font-cinzel">სწრაფი ბმულები</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" data-page="main" class="hover:text-antique-300 transition-colors flex items-center"><i class="fas fa-home mr-2"></i> მთავარი გვერდი</a></li>
+                        <li><a href="#" data-page="articles" class="hover:text-antique-300 transition-colors flex items-center"><i class="fas fa-newspaper mr-2"></i> სტატიები</a></li>
+                        <li><a href="#" data-page="gallery" class="hover:text-antique-300 transition-colors flex items-center"><i class="fas fa-images mr-2"></i> გალერეა</a></li>
+                        <li><a href="#" data-page="contact" class="hover:text-antique-300 transition-colors flex items-center"><i class="fas fa-envelope mr-2"></i> კონტაქტი</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold mb-4 font-cinzel">კონტაქტი</h4>
+                    <p class="mb-2 flex items-center"><i class="fas fa-map-marker-alt mr-2"></i> თბილისი, ისტორიული მუზეუმის ქუჩა №5</p>
+                    <p class="mb-2 flex items-center"><i class="fas fa-envelope mr-2"></i> info@tbilisi-history.ge</p>
+                    <p class="flex items-center"><i class="fas fa-phone mr-2"></i> +995 32 2 12 34 56</p>
+                </div>
+            </div>
+            <div class="border-t border-antique-700 mt-8 pt-6 text-center text-antique-300">
+                <p>&copy; 2023 თბილისის ისტორიული არქივი. ყველა უფლება დაცულია.</p>
+                <p class="mt-2 text-sm">ეს საიტი შექმნილია XVIII საუკუნის სტილში თანამედროვე ვებ-ტექნოლოგიების გამოყენებით.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // გვერდების გადართვის ფუნქცია
+        function showPage(pageId) {
+            // დამალე ყველა გვერდი
+            document.querySelectorAll('.page').forEach(page => {
+                page.classList.remove('active-page');
+            });
+            
+            // აჩვენე არჩეული გვერდი
+            const activePage = document.getElementById(pageId + '-page');
+            if (activePage) {
+                activePage.classList.add('active-page');
+            } else {
+                // თუ ვერ მოიძებნა სპეციფიური გვერდი, ჩვენება მთავარი
+                document.getElementById('main-page').classList.add('active-page');
+            }
+            
+            // დახურე მობილური მენიუ
+            document.getElementById('mobile-menu').classList.remove('open');
+            
+            // გადახვევა გვერდის დასაწყისში
+            window.scrollTo(0, 0);
+        }
+        
+        // გალერეის ფილტრაცია
+        function filterGallery(category) {
+            const items = document.querySelectorAll('.gallery-item');
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            
+            // განაახლე ღილაკების სტატუსი
+            filterBtns.forEach(btn => {
+                if (btn.dataset.filter === category) {
+                    btn.classList.add('active', 'bg-antique-600', 'text-white');
+                    btn.classList.remove('bg-antique-100', 'text-antique-800', 'hover:bg-antique-200');
+                } else {
+                    btn.classList.remove('active', 'bg-antique-600', 'text-white');
+                    btn.classList.add('bg-antique-100', 'text-antique-800', 'hover:bg-antique-200');
+                }
+            });
+            
+            // გაფილტრე სურათები
+            items.forEach(item => {
+                if (category === 'all' || item.dataset.category === category) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+        
+        // დომ კონტენტის ჩატვირთვისას
+        document.addEventListener('DOMContentLoaded', function() {
+            // ნავიგაციის ბმულების დამატება
+            document.querySelectorAll('a[data-page]').forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const page = this.getAttribute('data-page');
+                    showPage(page);
+                });
+            });
+            
+            // გალერეის ფილტრაციის ღილაკები
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const category = this.getAttribute('data-filter');
+                    filterGallery(category);
+                });
+            });
+            
+            // მობილური მენიუს ღილაკი
+            document.getElementById('mobile-menu-button').addEventListener('click', function() {
+                const menu = document.getElementById('mobile-menu');
+                menu.classList.toggle('open');
+                
+                // შეცვალე ხატულა
+                const icon = this.querySelector('i');
+                if (menu.classList.contains('open')) {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-times');
+                } else {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
+            });
+            
+            // საკონტაქტო ფორმის გაგზავნა
+            document.getElementById('contact-form').addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // აქ ჩასვით ფორმის გაგზავნის ლოგიკა
+                alert('შეტყობინება გაიგზავნა! მადლობთ, რომ დაგვიკავშირდით.');
+                this.reset();
+            });
+            
+            // თავდაპირველი გვერდის ჩვენება
+            showPage('main');
+        });
+    </script>
+</body>
+</html>
