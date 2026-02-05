@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>თბილისის ისტორია - რენესანსი</title>
+    <title>ისტორიული არქივი</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -41,6 +41,9 @@
             background-color: #f5e9d8;
             background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23a1887f' fill-opacity='0.1' fill-rule='evenodd'/%3E%3C/svg%3E");
         }
+        .sruli2{
+            margin-top: 10px;
+        }
         
         .page {
             display: none;
@@ -60,12 +63,18 @@
             transform: translateY(-5px);
             box-shadow: 0 10px 20px rgba(0,0,0,0.15);
         }
+        .renesansi{
+          margin-top: -9px;
+        }
         
         .nav-link {
             position: relative;
             transition: all 0.3s ease;
         }
+        .humana{
+            margin-top: 10px;
         
+        }
         .nav-link:after {
             content: '';
             position: absolute;
@@ -75,6 +84,9 @@
             left: 0;
             background-color: #a52a2a;
             transition: width 0.3s ease;
+        }
+        .humanizmi{
+            margin-top: -10px;
         }
         
         .nav-link:hover:after {
@@ -92,6 +104,12 @@
             max-width: 1200px;
             margin: 0 auto;
         }
+        .isari{
+            margin-right: 20px;
+            text-align: center;
+            margin-top: -22px;
+            margin-left: -40px;
+        }
         
         .timeline-container::after {
             content: '';
@@ -102,6 +120,9 @@
             bottom: 0;
             left: 50%;
             margin-left: -3px;
+        }
+        .sruli{
+            margin-top: 20px;
         }
         
         .timeline-item {
@@ -130,6 +151,7 @@
             top: 15px;
             z-index: 1;
         }
+      
         
         .timeline-item:nth-child(odd)::after {
             right: -12px;
@@ -182,6 +204,14 @@
         .gallery-item:hover {
             transform: scale(1.03);
         }
+        .tekstunia{
+            margin-top: 30px;
+            color: grey;
+        
+        }
+        .pawuka{
+            margin-top: 20px;
+        }
         
         .gallery-img {
             height: 250px;
@@ -198,6 +228,11 @@
             transition: all 0.3s ease;
             border: 1px solid #d4b89c;
         }
+        .sruli1{
+            margin-top: 10px;
+            font-size: small;
+            
+        }
         
         .contact-input:focus {
             border-color: #8b4513;
@@ -213,6 +248,11 @@
         
         .mobile-menu.open {
             max-height: 500px;
+            /* .text1{
+                display: flex;
+                justify-content: center;
+
+            } */
         }
     </style>
 </head>
@@ -263,22 +303,33 @@
                     <i class="text-antique-600 fas fa-feather-alt text-3xl mx-2"></i>
                     <i class="text-antique-600 fas fa-scroll text-3xl mx-2"></i>
                 </div>
-                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-antique-700">თბილისი XVIII საუკუნეში</h2>
-                <p class="text-lg md:text-xl max-w-3xl mx-auto text-antique-600">გამოიკვლიეთ ქალაქის ცხოვრება რთულ ისტორიულ პერიოდში, როდესაც თბილისი იყო სპარსული, ოსმალური და რუსული იმპერიების გავლენის არენა.</p>
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-antique-700">ჰუმანიზმისა და რენესანსის ეპოქის გავლენა ევროპულ სამყაროზე XIV - XVI საუკუნეები</h2>
+                <p class="text-lg md:text-xl max-w-3xl mx-auto text-antique-600">ჰუმანიზმისა და რენესანსის ეპოქამ (XIV–XVI სს.) ევროპული ცივილიზაცია ძირეულად შეცვალა. შუა საუკუნეების ღმერთზე და ეკლესიაზე ორიენტირებული მსოფლმხედველობა შეიცვალა ადამიანზე, გონებაზე, გამოცდილებაზე და ინდივიდზე ორიენტირებული აზროვნებით. ამ ეპოქამ საფუძველი ჩაუყარა მეცნიერების, ხელოვნების, პოლიტიკის, განათლებისა და ფილოსოფიის თანამედროვე განვითარებას.</p>
             </div>
 
             <!-- სტატიების გრიდი -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
                 <!-- სტატია 1 -->
                 <article class="card bg-white rounded-lg overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1580136607984-3c8f54d7c8b0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="ჯვაროსნული ლაშქრობები" class="w-full h-48 object-cover">
+
+                    <!-- here1 -->
+                    <img src="img/ჰუმანიზმი.jfif" alt="#" class="w-full h-48 object-cover">
                     <div class="p-6">
                         <h3 class="text-xl font-bold mb-3 text-antique-700">
-                            <a href="#" data-page="crusades" class="text-antique-600 hover:text-antique-800 transition-colors">ჯვაროსნული ლაშქრობები</a>
+                            <a href="#" data-page="crusades" class="text-antique-600 hover:text-antique-800 transition-colors">ჰუმანიზმი – ახალი მსოფლმხედველობა</a>
                         </h3>
-                        <p class="mb-4 text-gray-700">ჯვაროსნული ლაშქრობები იყო შუა საუკუნეების სამხედრო-რელიგიური კამპანიები, რომელთა მიზანი იერუსალიმის დაბრუნება იყო.</p>
-                        <div class="flex justify-between items-center">
-                            <span class="text-sm bg-antique-100 text-antique-800 py-1 px-3 rounded-full">1096-1291</span>
+                      
+                        <p class="humanizmi" class="mb-4 text-gray-700"> <ol>
+                            <li>რა არის ჰუმანიზმი?</li>
+                          <li>მისი ძირითადი იდეები</li>
+                          <li>მთავარი ჰუმანისტები</li>
+                          <li>ჰუმანიზმის გავლენა სამყაროზე</li>
+                        </ol>
+                            
+                        </p>
+                        
+                        <div  class="flex justify-between items-center">
+                            <span class="text-sm bg-antique-100 text-antique-800 py-1 px-3 rounded-full">XIV - XVI  </span>
                             <a href="#" data-page="crusades" class="text-antique-600 hover:text-antique-800 font-medium">სრულად ნახვა <i class="fas fa-arrow-right ml-1"></i></a>
                         </div>
                     </div>
@@ -286,14 +337,22 @@
 
                 <!-- სტატია 2 - იტალიური რენესანსი -->
                 <article class="card bg-white rounded-lg overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1578301978693-85fa9c0320b9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="იტალიური რენესანსი" class="w-full h-48 object-cover">
+                    <img src="img/renesansi2.jfif" alt="#" class="w-full h-48 object-cover">
                     <div class="p-6">
                         <h3 class="text-xl font-bold mb-3 text-antique-700">
-                            <a href="#" data-page="renaissance" class="text-antique-600 hover:text-antique-800 transition-colors">იტალიური რენესანსი</a>
+                            <a href="#" data-page="renaissance" class="text-antique-600 hover:text-antique-800 transition-colors">რენესანსი – კულტურული აღორძინება</a>
                         </h3>
-                        <p class="mb-4 text-gray-700">იტალიური რენესანსი იყო კულტურული მოძრაობა, რომელმაც XIV საუკუნის ბოლოდან XVI საუკუნემდე განაპირობა ევროპის ინტელექტუალური აღორძინება.</p>
-                        <div class="flex justify-between items-center">
-                            <span class="text-sm bg-antique-100 text-antique-800 py-1 px-3 rounded-full">1300-1600</span>
+                        <p class="renesansi" class="mb-4 text-gray-700"> 
+                            <ul>
+                            <li>რენესანსის არსი</li>
+                            <li>რენესანსის ცენტრები</li>
+                            <li>ანტიკური კულტურა და</li>
+                                <li> მისი ხელახალი აღმოჩენა</li> 
+                            <li></li>
+                        </ul>  </p>
+                
+                        <div class="pawuka" class="flex justify-between items-center">
+                            <span class="text-sm bg-antique-100 text-antique-800 py-1 px-3 rounded-full">XIV - XVI</span>
                             <a href="#" data-page="renaissance" class="text-antique-600 hover:text-antique-800 font-medium">სრულად ნახვა <i class="fas fa-arrow-right ml-1"></i></a>
                         </div>
                     </div>
@@ -301,14 +360,19 @@
 
                 <!-- სტატია 3 - ქართული რენესანსი -->
                 <article class="card bg-white rounded-lg overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1580136607984-3c8f54d7c8b0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="ქართული რენესანსი" class="w-full h-48 object-cover">
+                    <img src="img/ეკლესია.jfif" alt="ქართული რენესანსი" class="w-full h-48 object-cover">
                     <div class="p-6">
                         <h3 class="text-xl font-bold mb-3 text-antique-700">
-                            <a href="#" data-page="georgian-renaissance" class="text-antique-600 hover:text-antique-800 transition-colors">ქართული რენესანსი</a>
+                            <a href="#" data-page="georgian-renaissance" class="text-antique-600 hover:text-antique-800 transition-colors">რელიგიური გავლენა</a>
                         </h3>
-                        <p class="mb-4 text-gray-700">ქართული რენესანსი XI-XIII საუკუნეებში განვითარდა, როდესაც საქართველო განიცდიდა პოლიტიკურ, ეკონომიკურ და კულტურულ აღმავლობას.</p>
+                        <p class="mb-4 text-gray-700"><ul>
+                            <li>ეკლესიის კრიტიკა</li>
+                            <li>რელიგიური გავლენის შედეგი</li>
+                            <li>რეფორმაცია</li>
+                            <li>რწმენის ინდივიდუალური გააზრება</li>
+                        </ul>.</p>
                         <div class="flex justify-between items-center">
-                            <span class="text-sm bg-antique-100 text-antique-800 py-1 px-3 rounded-full">1000-1300</span>
+                            <span class="text-sm bg-antique-100 text-antique-800 py-1 px-3 rounded-full">XIV - XVI</span>
                             <a href="#" data-page="georgian-renaissance" class="text-antique-600 hover:text-antique-800 font-medium">სრულად ნახვა <i class="fas fa-arrow-right ml-1"></i></a>
                         </div>
                     </div>
@@ -317,15 +381,15 @@
 
             <!-- მხარეს ტექსტი -->
             <div class="bg-antique-50 p-8 rounded-lg shadow-inner mb-12">
-                <h3 class="text-2xl font-bold mb-6 text-center text-antique-700">XVIII საუკუნის თბილისის შესახებ</h3>
+                <h3 class="text-2xl font-bold mb-6 text-center text-antique-700">XIV - XVI საუკუნეების ევროპის შესახებ</h3>
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
                     <div>
-                        <p class="mb-4 text-gray-700">XVIII საუკუნე თბილისის ისტორიაში ერთ-ერთი ყველაზე რთული პერიოდი იყო. ქალაქი განიცდიდა მუდმივ ომებს, უცხოელთა შემოსევებს და შინააშლილობას.</p>
-                        <p class="mb-4 text-gray-700">ამ პერიოდში თბილისი რამდენჯერმე გადაიქცა სპარსეთისა და ოსმალეთის იმპერიების დაპყრობის არენად. მოსახლეობა მუდმივ საფრთხეში ცხოვრობდა და ქალაქის ეკონომიკა ძლიერ დაზარალდა.</p>
+                        <p  class="text1" class="mb-4 text-gray-700">ჰუმანიზმისა და რენესანსის ეპოქამ ევროპაში ძირეული გარდატეხა მოახდინა. ამ პერიოდში შუა საუკუნეების რელიგიურ ცენტრზე დაფუძნებული მსოფლმხედველობა შეიცვალა ადამიანზე, მის გონებასა და შესაძლებლობებზე ორიენტირებული აზროვნებით. გაიზარდა ინტერესი ანტიკური კულტურის, მეცნიერებისა და ხელოვნების მიმართ.</p>
+                        <p class="mb-4 text-gray-700"> განვითარდა რეალისტური ხელოვნება, ექსპერიმენტზე დაფუძნებული მეცნიერება და განათლება. წიგნის ბეჭდვამ ცოდნის სწრაფი გავრცელება უზრუნველყო, რამაც საზოგადოებრივი ცნობიერება შეცვალა.  </p>
                     </div>
                     <div>
-                        <p class="mb-4 text-gray-700">მიუხედავად ყველა სირთულისა, XVIII საუკუნეში თბილისში განვითარდა კულტურული და ინტელექტუალური ცხოვრება. ვახტანგ VI-ის პერიოდში განხორციელებულმა რეფორმებმა დიდი გავლენა მოახდინა ქალაქის განვითარებაზე.</p>
-                        <p class="text-gray-700">საუკუნის ბოლოს თბილისის მოსახლეობა შეადგენდა დაახლოებით 20 000 ადამიანს. ქალაქი იყოფოდა რამდენიმე რაიონად: კალა (ციხე-ქალაქი), სოლოლაკი, ავლაბარი, მთაწმინდა და ისანი.</p>
+                        <p class="mb-4 text-gray-700">  </p>
+                        <p class="text-gray-700">ეკლესიის ავტორიტეტი თანდათან დასუსტდა, ხოლო ინდივიდუალიზმმა და თავისუფალმა აზროვნებამ ახალი ეპოქის საფუძველი შექმნა. ამ პროცესებმა ევროპა შუა საუკუნეებიდან თანამედროვე სამყაროსკენ გადმოიყვანა.   </p>
                     </div>
                 </div>
             </div>
@@ -349,17 +413,21 @@
                 <!-- სტატია 1 -->
                 <article class="card bg-white rounded-lg overflow-hidden">
                     <div class="p-6">
-                        <span class="text-sm bg-red-100 text-red-800 py-1 px-3 rounded-full mb-4 inline-block">ჯვაროსნული ლაშქრობები</span>
-                        <h3 class="text-xl font-bold mb-3 text-antique-700">პირველი ჯვაროსნული ლაშქრობა</h3>
-                        <p class="mb-4 text-gray-700">პირველი ჯვაროსნული ლაშქრობა დაიწყო 1096 წელს პაპ ურბან II-ის მოწოდებით და დასრულდა 1099 წელს იერუსალიმის აღებით.</p>
-                        <a href="#" data-page="crusades" class="text-antique-600 hover:text-antique-800 font-medium">სრულად ნახვა <i class="fas fa-arrow-right ml-1"></i></a>
-                    </div>
+                        <span class="text-sm bg-red-100 text-red-800 py-1 px-3 rounded-full mb-4 inline-block">ჰუმანიზმი და ადამიანი </span>
+                        <h3 class="text-xl font-bold mb-3 text-antique-700">ჰუმანიზმი – ადამიანის დაბრუნება ისტორიის ცენტრში </h3>
+                            <p class="humana">
+                              <ul><li>ჰუმანიზმი – ახალი მსოფლმხედველობა</li> <li>რა არის ჰუმანიზმი?</li>
+ <li>მისი ძირითადი იდეები</li> </ul>
+                            </p>
+                        <a href="#" data-page="crusades" class="text-antique-600 hover:text-antique-800 font-medium"> <p class="sruli">სრულად ნახვა <i class="fas fa-arrow-right ml-1"> </i></a>
+                   </p>  </div> 
                 </article>
 
                 <!-- სტატია 2 -->
                 <article class="card bg-white rounded-lg overflow-hidden">
                     <div class="p-6">
-                        <span class="text-sm bg-blue-100 text-blue-800 py-1 px-3 rounded-full mb-4 inline-block">იტალიური რენესანსი</span>
+                        <span class="text-sm bg-blue-100 text-blue-800 py-1 px-3 rounded-full mb-4 inline-block">რენესანსის ხელოვნება
+                        </span>
                         <h3 class="text-xl font-bold mb-3 text-antique-700">რენესანსის ხელოვნება</h3>
                         <p class="mb-4 text-gray-700">რენესანსის პერიოდში ხელოვნებამ მიიღო ახალი ხასიათი, ფოკუსი გადაიტანა ადამიანზე და ბუნებრივ სილამაზეზე.</p>
                         <a href="#" data-page="renaissance" class="text-antique-600 hover:text-antique-800 font-medium">სრულად ნახვა <i class="fas fa-arrow-right ml-1"></i></a>
@@ -369,22 +437,24 @@
                 <!-- სტატია 3 -->
                 <article class="card bg-white rounded-lg overflow-hidden">
                     <div class="p-6">
-                        <span class="text-sm bg-green-100 text-green-800 py-1 px-3 rounded-full mb-4 inline-block">ქართული რენესანსი</span>
-                        <h3 class="text-xl font-bold mb-3 text-antique-700">დავით აღმაშენებელი</h3>
-                        <p class="mb-4 text-gray-700">დავით IV აღმაშენებელი იყო ერთ-ერთი უდიდესი ქართველი მეფე, რომელმაც საქართველო გააერთიანა და გააძლიერა.</p>
-                        <a href="#" data-page="georgian-renaissance" class="text-antique-600 hover:text-antique-800 font-medium">სრულად ნახვა <i class="fas fa-arrow-right ml-1"></i></a>
+                        <span class="text-sm bg-green-100 text-green-800 py-1 px-3 rounded-full mb-4 inline-block">მეცნიერების აღზევება</span>
+                        <h3 class="text-xl font-bold mb-3 text-antique-700">გონება რწმენის გვერდით</h3>
+                        <p class="mb-4 text-gray-700"> <ul>
+                            <li>მეცნიერება და ტექნოლოგია</li>
+                            <li>ცვლილებები</li>
+                            <li> მნიშვნელოვანი მეცნიერები</li>
+                            <li>გავლენა </li> 
+                            <li>მეცნიერული რევოლუცია</li>
+                        </ul>
+ 
+</p>
+                        <a href="#" data-page="georgian-renaissance" class="text-antique-600 hover:text-antique-800 font-medium"> <p class="sruli2"> სრულად ნახვა</p> 
+                         <div class="isari">   <i class="fas fa-arrow-right ml-1"></i> </div>
+                        </a>
                     </div>
                 </article>
                 
-                <!-- დამატებითი სტატიები -->
-                <article class="card bg-white rounded-lg overflow-hidden">
-                    <div class="p-6">
-                        <span class="text-sm bg-purple-100 text-purple-800 py-1 px-3 rounded-full mb-4 inline-block">XVIII საუკუნე</span>
-                        <h3 class="text-xl font-bold mb-3 text-antique-700">თბილისი XVIII საუკუნეში</h3>
-                        <p class="mb-4 text-gray-700">როგორ იცვლებოდა თბილისი რთულ პერიოდში, როდესაც იგი სხვადასხვა იმპერიის გავლენის ქვეშ იმყოფებოდა.</p>
-                        <a href="#" data-page="main" class="text-antique-600 hover:text-antique-800 font-medium">სრულად ნახვა <i class="fas fa-arrow-right ml-1"></i></a>
-                    </div>
-                </article>
+                
             </div>
         </main>
     </div>
@@ -413,10 +483,15 @@
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mb-12">
                 <!-- სურათი 1 -->
                 <div class="gallery-item rounded-lg overflow-hidden bg-white shadow-md" data-category="tbilisi">
-                    <img src="https://images.unsplash.com/photo-1593693399746-2d5fd75d5a16?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="ძველი თბილისი" class="gallery-img w-full">
+                    <img src="img/petrerko.jfif" alt="ძველი თბილისი" class="gallery-img w-full">
                     <div class="p-4">
-                        <h4 class="font-bold text-lg mb-2 text-antique-700">ძველი თბილისი</h4>
-                        <p class="text-sm text-gray-600">XIX საუკუნის თბილისის ქუჩა</p>
+                        <h4 class="font-bold text-lg mb-2 text-antique-700">ფრანჩესკო პეტრარკა (1304–1374)</h4>
+                        <p class="text-sm text-gray-600">რატომ არის მნიშვნელოვანი:
+
+ანტიკური ლიტერატურის ხელახალი აღმოჩენა
+
+ადამიანის გრძნობებისა და ინდივიდის მნიშვნელობის ხაზგასმა
+📌 ფოტო: კლასიკური პორტრეტი ლაურის გვირგვინით</p>
                     </div>
                 </div>
                 
@@ -495,7 +570,7 @@
             
             <div class="text-center mb-12 antique-border p-6 bg-antique-50">
                 <h2 class="text-3xl md:text-4xl font-bold mb-4 text-antique-700">კონტაქტი</h2>
-                <p class="text-lg md:text-xl max-w-3xl mx-auto text-antique-600">დაგვიკავშირდით კითხვებით, წინადადებებით თუ თანამშრომლობის შესახებ</p>
+                <p class="text-lg md:text-xl max-w-3xl mx-auto text-antique-600">დაგვიკავშირდით კითხვებისა და შემოთავაზებების ქონის შემთხვევაში</p>
             </div>
 
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-12">
@@ -510,7 +585,7 @@
                             </div>
                             <div>
                                 <h4 class="font-bold text-lg mb-1 text-antique-700">მისამართი</h4>
-                                <p class="text-gray-700">თბილისი, ისტორიული მუზეუმის ქუჩა №5</p>
+                                <p class="text-gray-700">სსიპ ქ. თბლისის 45 საჯარო სკოლა. 11გ კლასი</p>
                             </div>
                         </div>
                         
@@ -520,7 +595,7 @@
                             </div>
                             <div>
                                 <h4 class="font-bold text-lg mb-1 text-antique-700">ელ. ფოსტა</h4>
-                                <p class="text-gray-700">info@tbilisi-history.ge</p>
+                                <p class="text-gray-700">istoriuliarkivi@gmail.com</p>
                             </div>
                         </div>
                         
@@ -572,7 +647,7 @@
                     <h3 class="text-2xl font-bold mb-6 text-antique-700">დაგვიკავშირდით</h3>
                     
                     <form id="contact-form" class="space-y-6">
-                        <div>
+                         <div>
                             <label for="name" class="block mb-2 font-medium text-gray-700">სახელი და გვარი</label>
                             <input type="text" id="name" class="contact-input w-full p-3 rounded-lg focus:outline-none" required>
                         </div>
@@ -591,7 +666,7 @@
                                 <option value="suggestion">წინადადება</option>
                                 <option value="other">სხვა</option>
                             </select>
-                        </div>
+                        </div> -->
                         
                         <div>
                             <label for="message" class="block mb-2 font-medium text-gray-700">შეტყობინება</label>
@@ -619,8 +694,10 @@
             
             <!-- აქ ჩასვით თქვენი ჯვაროსნული ლაშქრობების გვერდის კონტენტი -->
             <div class="text-center mb-12 antique-border p-6 bg-antique-50">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-antique-700">ჯვაროსნული ლაშქრობები</h2>
-                <p class="text-lg md:text-xl max-w-3xl mx-auto text-antique-600">XI-XIII საუკუნეების რელიგიური ომები ქრისტიანობისა და ისლამისთვის წმინდა მიწის კონტროლისთვის.</p>
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-antique-700">ჰუმანიზმი – ადამიანის დაბრუნება ისტორიის ცენტრში</h2>
+                <p class="text-lg md:text-xl max-w-3xl mx-auto text-antique-600">ჰუმანიზმი გახდა ის ინტელექტუალური მოძრაობა, რომელმაც ევროპაში ადამიანის როლი თავიდან განსაზღვრა. თუ შუა საუკუნეებში ადამიანი საკუთარ თავს ხედავდა როგორც ცოდვილ არსებას, რომელიც მხოლოდ ღმერთის ნებას ემორჩილება, ჰუმანიზმმა წამოაყენა იდეა, რომ ადამიანი გონიერი, შემოქმედი და დამოუკიდებლად მოაზროვნე არსებაა. ჰუმანისტები სწავლობდნენ ანტიკურ ავტორებს – პლატონს, არისტოტელეს, ციცერონს – და მათ ნაშრომებში ადამიანის ღირსებისა და გონების მნიშვნელობას ხედავდნენ.
+
+ჰუმანიზმმა დიდი გავლენა მოახდინა განათლებაზე. სკოლებში და უნივერსიტეტებში გაჩნდა ახალი საგნები: გრამატიკა, რიტორიკა, ისტორია, ფილოსოფია. განათლების მიზანი აღარ იყო მხოლოდ სასულიერო პირის აღზრდა; იგი ემსახურებოდა სრულფასოვანი, კრიტიკულად მოაზროვნე პიროვნების ჩამოყალიბებას. ამან ხელი შეუწყო თავისუფალი აზროვნების, ინდივიდუალიზმისა და პასუხისმგებლობის განვითარებას, რაც საბოლოოდ თანამედროვე ევროპის საფუძვლად იქცა..</p>
             </div>
             
             <!-- დროის ხაზი და სხვა კონტენტი -->
@@ -637,8 +714,12 @@
             
             <!-- აქ ჩასვით თქვენი რენესანსის გვერდის კონტენტი -->
             <div class="text-center mb-12 antique-border p-6 bg-antique-50">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-antique-700">იტალიური რენესანსი</h2>
-                <p class="text-lg md:text-xl max-w-3xl mx-auto text-antique-600">XIV-XVI საუკუნეების კულტურული აღორძინება</p>
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-antique-700">რენესანსის ხელოვნება – სილამაზისა და რეალობის შერწყმა</h2>
+                <p class="text-lg md:text-xl max-w-3xl mx-auto text-antique-600">
+
+რენესანსის ეპოქაში ხელოვნება სრულიად ახალი მიმართულებით განვითარდა. მხატვრები და მოქანდაკეები აღარ ქმნიდნენ მხოლოდ რელიგიურ, სიმბოლურ გამოსახულებებს – ისინი ცდილობდნენ ადამიანის რეალური გარეგნობის, ემოციებისა და მოძრაობის გადმოცემას. ანატომიის ცოდნა, პერსპექტივის გამოყენება და სინათლე-ჩრდილის ტექნიკა ხელოვნებას უფრო ცოცხალსა და დამაჯერებელს ხდიდა.
+
+ლეონარდო და ვინჩი, მიქელანჯელო და რაფაელი არა მხოლოდ ხელოვანები, არამედ მოაზროვნეები და მკვლევრები იყვნენ. მათი ნამუშევრები აერთიანებდა მეცნიერებასა და ესთეტიკას. ხელოვნება გადაიქცა ადამიანის შესაძლებლობების დემონსტრაციად და არა მხოლოდ ღვთის სადიდებლად შექმნილ საშუალებად. ამ ცვლილებამ ხელოვანს მაღალი სოციალური სტატუსი მიანიჭა და ხელოვნება ევროპული კულტურის ერთ-ერთ მთავარ საყრდენად აქცია.</p>
             </div>
             
             <!-- დროის ხაზი და სხვა კონტენტი -->
@@ -655,8 +736,10 @@
             
             <!-- აქ ჩასვით თქვენი ქართული რენესანსის გვერდის კონტენტი -->
             <div class="text-center mb-12 antique-border p-6 bg-antique-50">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-antique-700">ქართული რენესანსი</h2>
-                <p class="text-lg md:text-xl max-w-3xl mx-auto text-antique-600">XI-XIII საუკუნეების ოქროს ხანა</p>
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-antique-700">მეცნიერების აღზევება </h2>
+                <p class="text-lg md:text-xl max-w-3xl mx-auto text-antique-600">რენესანსმა მეცნიერებას მისცა ახალი მიმართულება: დაკვირვება, ექსპერიმენტი და ლოგიკური ანალიზი. თუ ადრე ცოდნა ძირითადად ავტორიტეტებზე და ეკლესიის სწავლებაზე იყო დაფუძნებული, ახლა მეცნიერები ბუნებას თავად აკვირდებოდნენ. კოპერნიკის ჰელიოცენტრულმა თეორიამ და გალილეო გალილეის კვლევებმა ეჭვქვეშ დააყენა საუკუნეების განმავლობაში დამკვიდრებული შეხედულებები სამყაროზე.
+
+მეცნიერების განვითარებამ შეცვალა ადამიანის დამოკიდებულება სამყაროს მიმართ. ბუნება აღარ აღიქმებოდა მხოლოდ ღვთის საიდუმლოდ – იგი გახდა შესასწავლი და გასააზრებელი სისტემა. ეს პროცესი საფუძვლად დაედო მეცნიერულ რევოლუციას და თანამედროვე მეცნიერების ჩამოყალიბებას. საბოლოოდ, ცოდნამ დაიწყო პრაქტიკული გამოყენება ტექნიკაში, მედიცინასა და ყოველდღიურ ცხოვრებაში.</p>
             </div>
             
             <!-- დროის ხაზი და სხვა კონტენტი -->
@@ -670,7 +753,7 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div>
                     <h4 class="text-xl font-bold mb-4 font-cinzel">თბილისის ისტორიული არქივი</h4>
-                    <p class="text-antique-200">ჩვენი მიზანია შევინარჩუნოთ და გავავრცელოთ ინფორმაცია თბილისის მდიდარ ისტორიაზე, განსაკუთრებით XVIII საუკუნის რთულ პერიოდზე.</p>
+                    <p class="text-antique-200">აღნიშნული ინფორმაციის გავრცელების მიზანია, საზოგადოებაში ისტორიული ცნობიერების ამაღლება და იმის ჩვენება, თუ როგორ განსაზღვრავს წარსული ეპოქების გამოცდილება თანამედროვე სამყაროს განვითარებას.</p>
                 </div>
                 <div>
                     <h4 class="text-xl font-bold mb-4 font-cinzel">სწრაფი ბმულები</h4>
@@ -683,8 +766,8 @@
                 </div>
                 <div>
                     <h4 class="text-xl font-bold mb-4 font-cinzel">კონტაქტი</h4>
-                    <p class="mb-2 flex items-center"><i class="fas fa-map-marker-alt mr-2"></i> თბილისი, ისტორიული მუზეუმის ქუჩა №5</p>
-                    <p class="mb-2 flex items-center"><i class="fas fa-envelope mr-2"></i> info@tbilisi-history.ge</p>
+                    <p class="mb-2 flex items-center"><i class="fas fa-map-marker-alt mr-2"></i> სსიპ ქალაქ თბილისის 45-ე საჯარო სკოლა</p>
+                    <p class="mb-2 flex items-center"><i class="fas fa-envelope mr-2"></i>istoriuliarkivi@gmail.com</p>
                     <p class="flex items-center"><i class="fas fa-phone mr-2"></i> +995 32 2 12 34 56</p>
                 </div>
             </div>
