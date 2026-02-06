@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ka">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -34,47 +35,53 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Georgian:wght@400;600;700&family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif+Georgian:wght@400;600;700&family=Cinzel:wght@400;600;700&display=swap"
+        rel="stylesheet">
     <style>
         body {
             font-family: 'Noto Serif Georgian', serif;
             background-color: #f5e9d8;
             background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23a1887f' fill-opacity='0.1' fill-rule='evenodd'/%3E%3C/svg%3E");
         }
-        .sruli2{
+
+        .sruli2 {
             margin-top: 10px;
         }
-        
+
         .page {
             display: none;
         }
-        
+
         .active-page {
             display: block;
         }
-        
+
         .card {
             transition: all 0.3s ease;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             border: 1px solid #d4b89c;
         }
-        
+
         .card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
         }
-        .renesansi{
-          margin-top: -9px;
+
+        .renesansi {
+            margin-top: -9px;
         }
-        
+
         .nav-link {
             position: relative;
             transition: all 0.3s ease;
         }
-        .humana{
+
+        .humana {
             margin-top: 10px;
-        
+
         }
+
         .nav-link:after {
             content: '';
             position: absolute;
@@ -85,177 +92,257 @@
             background-color: #a52a2a;
             transition: width 0.3s ease;
         }
-        .humanizmi{
+
+        .humanizmi {
             margin-top: -10px;
         }
-        
+
         .nav-link:hover:after {
             width: 100%;
         }
-        
+
         .antique-border {
             border: 8px solid transparent;
             border-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cpath d='M0,0 L100,0 L100,100 L0,100 Z' fill='none' stroke='%238B4513' stroke-width='4' stroke-dasharray='10,5'/%3E%3C/svg%3E") 8 stretch;
         }
-        
-        /* დროის ხაზის სტილები */
+
+        /* განახლებული დროის ხაზის სტილები - 20 მოვლენისთვის */
         .timeline-container {
             position: relative;
             max-width: 1200px;
             margin: 0 auto;
+            padding: 40px 0;
         }
-        .isari{
-            margin-right: 20px;
-            text-align: center;
-            margin-top: -22px;
-            margin-left: -40px;
-        }
-        
+
         .timeline-container::after {
             content: '';
             position: absolute;
             width: 6px;
-            background-color: #8b4513;
+            background: linear-gradient(to bottom, #8b4513, #d4b89c, #8b4513);
             top: 0;
             bottom: 0;
             left: 50%;
-            margin-left: -3px;
+            transform: translateX(-50%);
+            border-radius: 3px;
         }
-        .sruli{
-            margin-top: 20px;
-        }
-        
+
         .timeline-item {
-            padding: 10px 40px;
+            padding: 10px 30px;
             position: relative;
             width: 50%;
             box-sizing: border-box;
+            margin-bottom: 30px;
         }
-        
+
         .timeline-item:nth-child(odd) {
             left: 0;
+            padding-right: 60px;
         }
-        
+
         .timeline-item:nth-child(even) {
             left: 50%;
+            padding-left: 60px;
         }
-        
+
         .timeline-item::after {
             content: '';
             position: absolute;
-            width: 25px;
-            height: 25px;
+            width: 20px;
+            height: 20px;
             background-color: #f5e9d8;
             border: 4px solid #8b4513;
             border-radius: 50%;
             top: 15px;
             z-index: 1;
+            transition: all 0.3s ease;
         }
-      
-        
+
+        .timeline-item:hover::after {
+            background-color: #8b4513;
+            transform: scale(1.2);
+        }
+
         .timeline-item:nth-child(odd)::after {
-            right: -12px;
+            right: -10px;
         }
-        
+
         .timeline-item:nth-child(even)::after {
-            left: -12px;
+            left: -10px;
         }
-        
+
         .timeline-content {
             padding: 20px;
             background-color: white;
-            border-radius: 6px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             border: 1px solid #d4b89c;
+            transition: all 0.3s ease;
+            position: relative;
         }
-        
+
+        .timeline-content:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+            border-color: #8b4513;
+        }
+
+        .timeline-content::before {
+            content: '';
+            position: absolute;
+            top: 15px;
+            width: 0;
+            height: 0;
+            border-style: solid;
+        }
+
+        .timeline-item:nth-child(odd) .timeline-content::before {
+            right: -15px;
+            border-width: 10px 0 10px 15px;
+            border-color: transparent transparent transparent white;
+        }
+
+        .timeline-item:nth-child(even) .timeline-content::before {
+            left: -15px;
+            border-width: 10px 15px 10px 0;
+            border-color: transparent white transparent transparent;
+        }
+
         /* მობილურისთვის დროის ხაზი */
         @media screen and (max-width: 768px) {
             .timeline-container::after {
-                left: 31px;
+                left: 30px;
+                transform: none;
             }
-            
+
             .timeline-item {
                 width: 100%;
                 padding-left: 70px;
                 padding-right: 25px;
+                left: 0 !important;
             }
-            
-            .timeline-item:nth-child(even) {
-                left: 0;
-            }
-            
+
             .timeline-item::after {
-                left: 20px;
+                left: 24px !important;
+                right: auto !important;
             }
-            
-            .timeline-item:nth-child(odd)::after,
-            .timeline-item:nth-child(even)::after {
-                left: 20px;
+
+            .timeline-content::before {
+                left: -15px !important;
+                right: auto !important;
+                border-width: 10px 15px 10px 0 !important;
+                border-color: transparent white transparent transparent !important;
             }
         }
-        
+
+        /* დროის ხაზის თარიღების სტილები */
+        .timeline-date {
+            font-family: 'Cinzel', serif;
+            font-weight: bold;
+            color: #8b4513;
+            display: inline-block;
+            padding: 5px 15px;
+            border-radius: 20px;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        /* მობილურისთვის დამატებითი სტილები */
+        @media screen and (max-width: 640px) {
+            .timeline-date {
+                font-size: 0.9rem;
+                padding: 4px 12px;
+            }
+
+            .timeline-content {
+                padding: 15px;
+            }
+        }
+
         /* გალერეის სტილები */
         .gallery-item {
             transition: all 0.3s ease;
             overflow: hidden;
         }
-        
+
         .gallery-item:hover {
             transform: scale(1.03);
         }
-        .tekstunia{
+
+        .tekstunia {
             margin-top: 30px;
             color: grey;
-        
+
         }
-        .pawuka{
+
+        .pawuka {
             margin-top: 20px;
         }
-        
+
         .gallery-img {
             height: 250px;
             object-fit: cover;
             transition: transform 0.5s ease;
         }
-        
+
         .gallery-item:hover .gallery-img {
             transform: scale(1.1);
         }
-        
+
+        /* ფაქტების გვერდის სტილები */
+        .fact-card {
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border: 1px solid #d4b89c;
+        }
+
+        .fact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+            border-color: #8b4513;
+        }
+
+        .fact-img {
+            height: 200px;
+            object-fit: cover;
+            border-bottom: 1px solid #d4b89c;
+        }
+
+        .fact-icon {
+            color: #8b4513;
+            font-size: 1.5rem;
+            margin-right: 10px;
+        }
+
         /* კონტაქტის ფორმის სტილები */
         .contact-input {
             transition: all 0.3s ease;
             border: 1px solid #d4b89c;
         }
-        .sruli1{
+
+        .sruli1 {
             margin-top: 10px;
             font-size: small;
-            
+
         }
-        
+
         .contact-input:focus {
             border-color: #8b4513;
             box-shadow: 0 0 0 3px rgba(139, 69, 19, 0.1);
         }
-        
+
         /* მობილური მენიუს სტილები */
         .mobile-menu {
             max-height: 0;
             overflow: hidden;
             transition: max-height 0.3s ease-out;
         }
-        
+
         .mobile-menu.open {
             max-height: 500px;
-            /* .text1{
-                display: flex;
-                justify-content: center;
-
-            } */
         }
     </style>
 </head>
+
 <body class="text-gray-800">
     <!-- ნავიგაცია -->
     <header class="bg-antique-900 text-antique-50 py-4 shadow-lg sticky top-0 z-50">
@@ -266,28 +353,35 @@
                     <i class="fas fa-landmark text-2xl mr-3"></i>
                     <h1 class="font-cinzel text-xl md:text-2xl font-bold">თბილისის ისტორიული არქივი</h1>
                 </div>
-                
+
                 <!-- მობილური მენიუს ღილაკი -->
                 <button id="mobile-menu-button" class="md:hidden text-2xl">
                     <i class="fas fa-bars"></i>
                 </button>
-                
+
                 <!-- დესკტოპის ნავიგაცია -->
                 <nav class="hidden md:flex space-x-6">
                     <a href="#" data-page="main" class="nav-link font-medium hover:text-antique-200">მთავარი</a>
                     <a href="#" data-page="articles" class="nav-link font-medium hover:text-antique-200">სტატიები</a>
                     <a href="#" data-page="gallery" class="nav-link font-medium hover:text-antique-200">გალერეა</a>
+                    <a href="#" data-page="facts" class="nav-link font-medium hover:text-antique-200">ფაქტები</a>
                     <a href="#" data-page="contact" class="nav-link font-medium hover:text-antique-200">კონტაქტი</a>
                 </nav>
             </div>
-            
+
             <!-- მობილური მენიუ -->
             <div id="mobile-menu" class="mobile-menu md:hidden">
                 <nav class="flex flex-col space-y-4 mt-4 pb-2">
-                    <a href="#" data-page="main" class="nav-link font-medium hover:text-antique-200 py-2 border-b border-antique-700">მთავარი</a>
-                    <a href="#" data-page="articles" class="nav-link font-medium hover:text-antique-200 py-2 border-b border-antique-700">სტატიები</a>
-                    <a href="#" data-page="gallery" class="nav-link font-medium hover:text-antique-200 py-2 border-b border-antique-700">გალერეა</a>
-                    <a href="#" data-page="contact" class="nav-link font-medium hover:text-antique-200 py-2 border-b border-antique-700">კონტაქტი</a>
+                    <a href="#" data-page="main"
+                        class="nav-link font-medium hover:text-antique-200 py-2 border-b border-antique-700">მთავარი</a>
+                    <a href="#" data-page="articles"
+                        class="nav-link font-medium hover:text-antique-200 py-2 border-b border-antique-700">სტატიები</a>
+                    <a href="#" data-page="gallery"
+                        class="nav-link font-medium hover:text-antique-200 py-2 border-b border-antique-700">გალერეა</a>
+                    <a href="#" data-page="facts"
+                        class="nav-link font-medium hover:text-antique-200 py-2 border-b border-antique-700">ფაქტები</a>
+                    <a href="#" data-page="contact"
+                        class="nav-link font-medium hover:text-antique-200 py-2 border-b border-antique-700">კონტაქტი</a>
                 </nav>
             </div>
         </div>
@@ -303,34 +397,43 @@
                     <i class="text-antique-600 fas fa-feather-alt text-3xl mx-2"></i>
                     <i class="text-antique-600 fas fa-scroll text-3xl mx-2"></i>
                 </div>
-                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-antique-700">ჰუმანიზმისა და რენესანსის ეპოქის გავლენა ევროპულ სამყაროზე XIV - XVI საუკუნეები</h2>
-                <p class="text-lg md:text-xl max-w-3xl mx-auto text-antique-600">ჰუმანიზმისა და რენესანსის ეპოქამ (XIV–XVI სს.) ევროპული ცივილიზაცია ძირეულად შეცვალა. შუა საუკუნეების ღმერთზე და ეკლესიაზე ორიენტირებული მსოფლმხედველობა შეიცვალა ადამიანზე, გონებაზე, გამოცდილებაზე და ინდივიდზე ორიენტირებული აზროვნებით. ამ ეპოქამ საფუძველი ჩაუყარა მეცნიერების, ხელოვნების, პოლიტიკის, განათლებისა და ფილოსოფიის თანამედროვე განვითარებას.</p>
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-antique-700">ჰუმანიზმისა და რენესანსის ეპოქის
+                    გავლენა ევროპულ სამყაროზე XIV - XVI საუკუნეები</h2>
+                <p class="text-lg md:text-xl max-w-3xl mx-auto text-antique-600">ჰუმანიზმისა და რენესანსის ეპოქამ
+                    (XIV–XVI სს.) ევროპული ცივილიზაცია ძირეულად შეცვალა. შუა საუკუნეების ღმერთზე და ეკლესიაზე
+                    ორიენტირებული მსოფლმხედველობა შეიცვალა ადამიანზე, გონებაზე, გამოცდილებაზე და ინდივიდზე ორიენტირებული
+                    აზროვნებით. ამ ეპოქამ საფუძველი ჩაუყარა მეცნიერების, ხელოვნების, პოლიტიკის, განათლებისა და
+                    ფილოსოფიის თანამედროვე განვითარებას.</p>
             </div>
 
             <!-- სტატიების გრიდი -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
                 <!-- სტატია 1 -->
                 <article class="card bg-white rounded-lg overflow-hidden">
-
-                    <!-- here1 -->
                     <img src="img/ჰუმანიზმი.jfif" alt="#" class="w-full h-48 object-cover">
                     <div class="p-6">
                         <h3 class="text-xl font-bold mb-3 text-antique-700">
-                            <a href="#" data-page="crusades" class="text-antique-600 hover:text-antique-800 transition-colors">ჰუმანიზმი – ახალი მსოფლმხედველობა</a>
+                            <a href="#" data-page="crusades"
+                                class="text-antique-600 hover:text-antique-800 transition-colors">ჰუმანიზმი – ახალი
+                                მსოფლმხედველობა</a>
                         </h3>
-                      
-                        <p class="humanizmi" class="mb-4 text-gray-700"> <ol>
+
+                        <p class="humanizmi" class="mb-4 text-gray-700">
+                        <ol>
                             <li>რა არის ჰუმანიზმი?</li>
-                          <li>მისი ძირითადი იდეები</li>
-                          <li>მთავარი ჰუმანისტები</li>
-                          <li>ჰუმანიზმის გავლენა სამყაროზე</li>
+                            <li>მისი ძირითადი იდეები</li>
+                            <li>მთავარი ჰუმანისტები</li>
+                            <li>ჰუმანიზმის გავლენა სამყაროზე</li>
                         </ol>
-                            
+
                         </p>
-                        
-                        <div  class="flex justify-between items-center">
-                            <span class="text-sm bg-antique-100 text-antique-800 py-1 px-3 rounded-full">XIV - XVI  </span>
-                            <a href="#" data-page="crusades" class="text-antique-600 hover:text-antique-800 font-medium">სრულად ნახვა <i class="fas fa-arrow-right ml-1"></i></a>
+
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm bg-antique-100 text-antique-800 py-1 px-3 rounded-full">XIV - XVI
+                            </span>
+                            <a href="#" data-page="crusades"
+                                class="text-antique-600 hover:text-antique-800 font-medium">სრულად ნახვა <i
+                                    class="fas fa-arrow-right ml-1"></i></a>
                         </div>
                     </div>
                 </article>
@@ -340,20 +443,26 @@
                     <img src="img/renesansi2.jfif" alt="#" class="w-full h-48 object-cover">
                     <div class="p-6">
                         <h3 class="text-xl font-bold mb-3 text-antique-700">
-                            <a href="#" data-page="renaissance" class="text-antique-600 hover:text-antique-800 transition-colors">რენესანსი – კულტურული აღორძინება</a>
+                            <a href="#" data-page="renaissance"
+                                class="text-antique-600 hover:text-antique-800 transition-colors">რენესანსი – კულტურული
+                                აღორძინება</a>
                         </h3>
-                        <p class="renesansi" class="mb-4 text-gray-700"> 
-                            <ul>
+                        <p class="renesansi" class="mb-4 text-gray-700">
+                        <ul>
                             <li>რენესანსის არსი</li>
                             <li>რენესანსის ცენტრები</li>
                             <li>ანტიკური კულტურა და</li>
-                                <li> მისი ხელახალი აღმოჩენა</li> 
+                            <li> მისი ხელახალი აღმოჩენა</li>
                             <li></li>
-                        </ul>  </p>
-                
+                        </ul>
+                        </p>
+
                         <div class="pawuka" class="flex justify-between items-center">
-                            <span class="text-sm bg-antique-100 text-antique-800 py-1 px-3 rounded-full">XIV - XVI</span>
-                            <a href="#" data-page="renaissance" class="text-antique-600 hover:text-antique-800 font-medium">სრულად ნახვა <i class="fas fa-arrow-right ml-1"></i></a>
+                            <span class="text-sm bg-antique-100 text-antique-800 py-1 px-3 rounded-full">XIV -
+                                XVI</span>
+                            <a href="#" data-page="renaissance"
+                                class="text-antique-600 hover:text-antique-800 font-medium">სრულად ნახვა <i
+                                    class="fas fa-arrow-right ml-1"></i></a>
                         </div>
                     </div>
                 </article>
@@ -363,33 +472,349 @@
                     <img src="img/ეკლესია.jfif" alt="ქართული რენესანსი" class="w-full h-48 object-cover">
                     <div class="p-6">
                         <h3 class="text-xl font-bold mb-3 text-antique-700">
-                            <a href="#" data-page="georgian-renaissance" class="text-antique-600 hover:text-antique-800 transition-colors">რელიგიური გავლენა</a>
+                            <a href="#" data-page="georgian-renaissance"
+                                class="text-antique-600 hover:text-antique-800 transition-colors">რელიგიური გავლენა</a>
                         </h3>
-                        <p class="mb-4 text-gray-700"><ul>
+                        <p class="mb-4 text-gray-700">
+                        <ul>
                             <li>ეკლესიის კრიტიკა</li>
                             <li>რელიგიური გავლენის შედეგი</li>
                             <li>რეფორმაცია</li>
                             <li>რწმენის ინდივიდუალური გააზრება</li>
                         </ul>.</p>
                         <div class="flex justify-between items-center">
-                            <span class="text-sm bg-antique-100 text-antique-800 py-1 px-3 rounded-full">XIV - XVI</span>
-                            <a href="#" data-page="georgian-renaissance" class="text-antique-600 hover:text-antique-800 font-medium">სრულად ნახვა <i class="fas fa-arrow-right ml-1"></i></a>
+                            <span class="text-sm bg-antique-100 text-antique-800 py-1 px-3 rounded-full">XIV -
+                                XVI</span>
+                            <a href="#" data-page="georgian-renaissance"
+                                class="text-antique-600 hover:text-antique-800 font-medium">სრულად ნახვა <i
+                                    class="fas fa-arrow-right ml-1"></i></a>
                         </div>
                     </div>
                 </article>
             </div>
 
+            <!-- დროის ხაზი - ახალი განყოფილება 20 მოვლენით -->
+            <div class="bg-antique-50 p-8 rounded-lg shadow-inner mb-12">
+                <h3 class="text-2xl font-bold mb-8 text-center text-antique-700">XIV საუკუნე: კრიზისი და გარდატეხა</h3>
+                <p class="text-center text-lg text-antique-600 mb-10 max-w-3xl mx-auto">ევროპული ცივილიზაციის ყველაზე
+                    მნიშვნელოვანი მოვლენები, რომლებმაც თანამედროვე სამყაროს საფუძველი ჩაუყარა</p>
+
+                <!-- დროის ხაზის კონტეინერი -->
+                <div class="timeline-container">
+                    <!-- მოვლენა 1 -->
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="flex items-center mb-3">
+                                <span class="timeline-date bg-red-100 text-red-800">1304</span>
+                                <span class="ml-3 text-sm font-medium text-gray-500"><i class="fas fa-user mr-1"></i>
+                                    პიროვნება</span>
+                            </div>
+                            <h4 class="font-bold text-lg mb-2 text-antique-700">ფრანჩესკო პეტრარკას დაბადება</h4>
+                            <p class="text-gray-700">ჰუმანიზმის მამად მიჩნეული პოეტი და მოაზროვნე. მან წამოიწყო ინტერესი
+                                ანტიკური ლათინური ლიტერატურის მიმართ და ადამიანის ინდივიდუალობის აღიარება.</p>
+                        </div>
+                    </div>
+
+                    <!-- მოვლენა 2 -->
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="flex items-center mb-3">
+                                <span class="timeline-date bg-blue-100 text-blue-800">1347-1351</span>
+                                <span class="ml-3 text-sm font-medium text-gray-500"><i
+                                        class="fas fa-skull-crossbones mr-1"></i> ეპიდემია</span>
+                            </div>
+                            <h4 class="font-bold text-lg mb-2 text-antique-700">შავი ჭირის ეპიდემია</h4>
+                            <p class="text-gray-700">ევროპის მოსახლეობის მესამედი შეიწირა. ამან გამოიწვია სოციალური
+                                ცვლილებები, ეკონომიკური ტრანსფორმაცია და რელიგიური რწმენის კრიზისი.</p>
+                        </div>
+                    </div>
+
+                    <!-- მოვლენა 3 -->
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="flex items-center mb-3">
+                                <span class="timeline-date bg-green-100 text-green-800">1397</span>
+                                <span class="ml-3 text-sm font-medium text-gray-500"><i class="fas fa-book mr-1"></i>
+                                    განათლება</span>
+                            </div>
+                            <h4 class="font-bold text-lg mb-2 text-antique-700">ფლორენციის უნივერსიტეტის დაარსება</h4>
+                            <p class="text-gray-700">ფლორენციაში დაარსდა ერთ-ერთი პირველი სეკულარული უნივერსიტეტი, სადაც
+                                ჰუმანიტარულ მეცნიერებებს ასწავლიდნენ.</p>
+                        </div>
+                    </div>
+
+                    <!-- მოვლენა 4 -->
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="flex items-center mb-3">
+                                <span class="timeline-date bg-yellow-100 text-yellow-800">1401</span>
+                                <span class="ml-3 text-sm font-medium text-gray-500"><i
+                                        class="fas fa-door-open mr-1"></i> ხელოვნება</span>
+                            </div>
+                            <h4 class="font-bold text-lg mb-2 text-antique-700">ფლორენციის კათედრალის კარების კონკურსი
+                            </h4>
+                            <p class="text-gray-700">ლორენცო გიბერტი და ფილიპო ბრუნელესკი ეჯიბრებიან კათედრალის კარების
+                                დიზაინისთვის.</p>
+                        </div>
+                    </div>
+
+                    <!-- მოვლენა 5 -->
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="flex items-center mb-3">
+                                <span class="timeline-date bg-purple-100 text-purple-800">1436</span>
+                                <span class="ml-3 text-sm font-medium text-gray-500"><i class="fas fa-church mr-1"></i>
+                                    არქიტექტურა</span>
+                            </div>
+                            <h4 class="font-bold text-lg mb-2 text-antique-700">ფლორენციის კათედრალის გუმბათის აშენება
+                            </h4>
+                            <p class="text-gray-700">ბრუნელესკი აშენებს ფლორენციის კათედრალის გუმბათს, რენესანსის
+                                არქიტექტურის შედევრს.</p>
+                        </div>
+                    </div>
+
+                    <!-- მოვლენა 6 -->
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="flex items-center mb-3">
+                                <span class="timeline-date bg-indigo-100 text-indigo-800">1440</span>
+                                <span class="ml-3 text-sm font-medium text-gray-500"><i class="fas fa-print mr-1"></i>
+                                    ტექნოლოგია</span>
+                            </div>
+                            <h4 class="font-bold text-lg mb-2 text-antique-700">ბეჭდვის პრესის გამოგონება</h4>
+                            <p class="text-gray-700">იოჰანეს გუტენბერგმა გამოიგონა მობილური ტიპების ბეჭდვის პრესა, რამაც
+                                რევოლუცია მოახდინა ინფორმაციის გავრცელებაში.</p>
+                        </div>
+                    </div>
+
+                    <!-- მოვლენა 7 -->
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="flex items-center mb-3">
+                                <span class="timeline-date bg-pink-100 text-pink-800">1452</span>
+                                <span class="ml-3 text-sm font-medium text-gray-500"><i class="fas fa-palette mr-1"></i>
+                                    პიროვნება</span>
+                            </div>
+                            <h4 class="font-bold text-lg mb-2 text-antique-700">ლეონარდო და ვინჩის დაბადება</h4>
+                            <p class="text-gray-700">დაიბადა რენესანსის ყველაზე მნიშვნელოვანი ფიგურა, რომელიც იყო
+                                მხატვარი, მეცნიერი და გამომგონებელი.</p>
+                        </div>
+                    </div>
+
+                    <!-- მოვლენა 8 -->
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="flex items-center mb-3">
+                                <span class="timeline-date bg-teal-100 text-teal-800">1453</span>
+                                <span class="ml-3 text-sm font-medium text-gray-500"><i
+                                        class="fas fa-landmark mr-1"></i> ისტორია</span>
+                            </div>
+                            <h4 class="font-bold text-lg mb-2 text-antique-700">კონსტანტინოპოლის დაცემა</h4>
+                            <p class="text-gray-700">ოსმალეთის იმპერიამ აიღო კონსტანტინოპოლი, რამაც ბიზანტიელი
+                                მეცნიერები და მხატვრები გააქცია იტალიაში.</p>
+                        </div>
+                    </div>
+
+                    <!-- მოვლენა 9 -->
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="flex items-center mb-3">
+                                <span class="timeline-date bg-orange-100 text-orange-800">1475</span>
+                                <span class="ml-3 text-sm font-medium text-gray-500"><i
+                                        class="fas fa-monument mr-1"></i> პიროვნება</span>
+                            </div>
+                            <h4 class="font-bold text-lg mb-2 text-antique-700">მიქელანჯელოს დაბადება</h4>
+                            <p class="text-gray-700">დაიბადა დიდი მოქანდაკე და მხატვარი, რომელმაც შექმნა "დავითი" და
+                                მხატვრული შედევრები სიქსტეს კაპელაში.</p>
+                        </div>
+                    </div>
+
+                    <!-- მოვლენა 10 -->
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="flex items-center mb-3">
+                                <span class="timeline-date bg-rose-100 text-rose-800">1483</span>
+                                <span class="ml-3 text-sm font-medium text-gray-500"><i
+                                        class="fas fa-paint-brush mr-1"></i> პიროვნება</span>
+                            </div>
+                            <h4 class="font-bold text-lg mb-2 text-antique-700">რაფაელის დაბადება</h4>
+                            <p class="text-gray-700">დაიბადა დიდი მხატვარი, რომელიც ცნობილია თავისი ნახატებით და
+                                ვატიკანში მუშაობით.</p>
+                        </div>
+                    </div>
+
+                    <!-- მოვლენა 11 -->
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="flex items-center mb-3">
+                                <span class="timeline-date bg-cyan-100 text-cyan-800">1492</span>
+                                <span class="ml-3 text-sm font-medium text-gray-500"><i class="fas fa-ship mr-1"></i>
+                                    აღმოჩენები</span>
+                            </div>
+                            <h4 class="font-bold text-lg mb-2 text-antique-700">კოლუმბის ამერიკის აღმოჩენა</h4>
+                            <p class="text-gray-700">კრისტოფერ კოლუმბმა მიაღწია ამერიკას, რაც ევროპული ექსპანსიის
+                                დასაწყისი გახდა.</p>
+                        </div>
+                    </div>
+
+                    <!-- მოვლენა 12 -->
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="flex items-center mb-3">
+                                <span class="timeline-date bg-lime-100 text-lime-800">1494</span>
+                                <span class="ml-3 text-sm font-medium text-gray-500"><i
+                                        class="fas fa-balance-scale mr-1"></i> ხელშეკრულება</span>
+                            </div>
+                            <h4 class="font-bold text-lg mb-2 text-antique-700">ტორდესილასის ხელშეკრულება</h4>
+                            <p class="text-gray-700">ესპანეთმა და პორტუგალიამ მსოფლიოს გაიყვეს, რაც კოლონიური ექსპანსიის
+                                დასაწყისი იყო.</p>
+                        </div>
+                    </div>
+
+                    <!-- მოვლენა 13 -->
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="flex items-center mb-3">
+                                <span class="timeline-date bg-amber-100 text-amber-800">1498</span>
+                                <span class="ml-3 text-sm font-medium text-gray-500"><i class="fas fa-route mr-1"></i>
+                                    აღმოჩენები</span>
+                            </div>
+                            <h4 class="font-bold text-lg mb-2 text-antique-700">ვასკო და გამას ინდოეთის მიღწევა</h4>
+                            <p class="text-gray-700">პორტუგალიელმა მოგზაურმა ზღვის გზა აღმოაჩინა ინდოეთისკენ, რამაც
+                                ევროპის ვაჭრობა გადააკეთა.</p>
+                        </div>
+                    </div>
+
+                    <!-- მოვლენა 14 -->
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="flex items-center mb-3">
+                                <span class="timeline-date bg-emerald-100 text-emerald-800">1504</span>
+                                <span class="ml-3 text-sm font-medium text-gray-500"><i
+                                        class="fas fa-sculpture mr-1"></i> ხელოვნება</span>
+                            </div>
+                            <h4 class="font-bold text-lg mb-2 text-antique-700">მიქელანჯელოს "დავითის" დასრულება</h4>
+                            <p class="text-gray-700">დაასრულა თავისი ცნობილი სკულპტურა "დავითი", რომელიც რენესანსის
+                                ხელოვნების სიმბოლო გახდა.</p>
+                        </div>
+                    </div>
+
+                    <!-- მოვლენა 15 -->
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="flex items-center mb-3">
+                                <span class="timeline-date bg-violet-100 text-violet-800">1508-1512</span>
+                                <span class="ml-3 text-sm font-medium text-gray-500"><i
+                                        class="fas fa-paint-roller mr-1"></i> ხელოვნება</span>
+                            </div>
+                            <h4 class="font-bold text-lg mb-2 text-antique-700">სიქსტეს კაპელის ჭერის მხატვრობა</h4>
+                            <p class="text-gray-700">მიქელანჯელო ამშვენებს სიქსტეს კაპელის ჭერს, რაც მისი ყველაზე
+                                ცნობილი ნამუშევარია.</p>
+                        </div>
+                    </div>
+
+                    <!-- მოვლენა 16 -->
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="flex items-center mb-3">
+                                <span class="timeline-date bg-fuchsia-100 text-fuchsia-800">1513</span>
+                                <span class="ml-3 text-sm font-medium text-gray-500"><i class="fas fa-crown mr-1"></i>
+                                    პოლიტიკა</span>
+                            </div>
+                            <h4 class="font-bold text-lg mb-2 text-antique-700">მაკიაველის "მთავრის" გამოცემა</h4>
+                            <p class="text-gray-700">გამოაქვეყნა "მთავარი" - პოლიტიკური ფილოსოფიის ტრაქტატი, რომელიც
+                                აღიარებდა პოლიტიკის სეკულარულ ბუნებას.</p>
+                        </div>
+                    </div>
+
+                    <!-- მოვლენა 17 -->
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="flex items-center mb-3">
+                                <span class="timeline-date bg-sky-100 text-sky-800">1517</span>
+                                <span class="ml-3 text-sm font-medium text-gray-500"><i class="fas fa-church mr-1"></i>
+                                    რელიგია</span>
+                            </div>
+                            <h4 class="font-bold text-lg mb-2 text-antique-700">რეფორმაციის დასაწყისი</h4>
+                            <p class="text-gray-700">მარტინ ლუთერმა ვიტენბერგის ეკლესიის კარზე ჩაკრულა თავისი 95 თეზისი,
+                                რითაც დაიწყო პროტესტანტული რეფორმაცია.</p>
+                        </div>
+                    </div>
+
+                    <!-- მოვლენა 18 -->
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="flex items-center mb-3">
+                                <span class="timeline-date bg-rose-100 text-rose-800">1521</span>
+                                <span class="ml-3 text-sm font-medium text-gray-500"><i class="fas fa-compass mr-1"></i>
+                                    აღმოჩენები</span>
+                            </div>
+                            <h4 class="font-bold text-lg mb-2 text-antique-700">მაგელანის მსოფლიოს გარშემო მოგზაურობა
+                            </h4>
+                            <p class="text-gray-700">ფერდინანდ მაგელანის ექსპედიცია პირველი გახდა, რომელმაც მსოფლიო
+                                გაუარა, რაც დედამიწის სფერული ფორმის დამტკიცება იყო.</p>
+                        </div>
+                    </div>
+
+                    <!-- მოვლენა 19 -->
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="flex items-center mb-3">
+                                <span class="timeline-date bg-indigo-100 text-indigo-800">1543</span>
+                                <span class="ml-3 text-sm font-medium text-gray-500"><i
+                                        class="fas fa-globe-europe mr-1"></i> მეცნიერება</span>
+                            </div>
+                            <h4 class="font-bold text-lg mb-2 text-antique-700">კოპერნიკის ჰელიოცენტრული თეორია</h4>
+                            <p class="text-gray-700">გამოაქვეყნა თავისი ნაშრომი, სადაც დაასაბუთა, რომ მზე, და არა
+                                დედამიწა, არის სოლარული სისტემის ცენტრი.</p>
+                        </div>
+                    </div>
+
+                    <!-- მოვლენა 20 -->
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="flex items-center mb-3">
+                                <span class="timeline-date bg-cyan-100 text-cyan-800">1564</span>
+                                <span class="ml-3 text-sm font-medium text-gray-500"><i
+                                        class="fas fa-user-astronaut mr-1"></i> მეცნიერება</span>
+                            </div>
+                            <h4 class="font-bold text-lg mb-2 text-antique-700">გალილეო გალილეის დაბადება</h4>
+                            <p class="text-gray-700">დაიბადა გალილეო გალილეი, რომელმაც მნიშვნელოვანი წვლილი შეიტანა
+                                მეცნიერულ მეთოდში, ასტრონომიასა და ფიზიკაში.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- დროის ხაზის აღწერა -->
+                <div class="mt-10 p-6 bg-white rounded-lg border border-antique-200">
+                    <h4 class="font-bold text-xl mb-3 text-antique-700 text-center"><i
+                            class="fas fa-info-circle mr-2"></i>დროის ხაზის მნიშვნელობა</h4>
+                    <p class="text-gray-700 text-center">ეს დროის ხაზი ასახავს ჰუმანიზმისა და რენესანსის ეპოქის 20
+                        ყველაზე მნიშვნელოვან მოვლენას, რომლებმაც ევროპული ცივილიზაციის განვითარება განსაზღვრა. თითოეულმა
+                        ამ მოვლენამ შეცვალა ადამიანთა მსოფლმხედველობა, განათლების სისტემა, ხელოვნება და მეცნიერება, რაც
+                        საბოლოოდ თანამედროვე დასავლური ცივილიზაციის საფუძველი გახდა.</p>
+                </div>
+            </div>
+
             <!-- მხარეს ტექსტი -->
             <div class="bg-antique-50 p-8 rounded-lg shadow-inner mb-12">
-                <h3 class="text-2xl font-bold mb-6 text-center text-antique-700">XIV - XVI საუკუნეების ევროპის შესახებ</h3>
+                <h3 class="text-2xl font-bold mb-6 text-center text-antique-700">XIV - XVI საუკუნეების ევროპის შესახებ
+                </h3>
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
                     <div>
-                        <p  class="text1" class="mb-4 text-gray-700">ჰუმანიზმისა და რენესანსის ეპოქამ ევროპაში ძირეული გარდატეხა მოახდინა. ამ პერიოდში შუა საუკუნეების რელიგიურ ცენტრზე დაფუძნებული მსოფლმხედველობა შეიცვალა ადამიანზე, მის გონებასა და შესაძლებლობებზე ორიენტირებული აზროვნებით. გაიზარდა ინტერესი ანტიკური კულტურის, მეცნიერებისა და ხელოვნების მიმართ.</p>
-                        <p class="mb-4 text-gray-700"> განვითარდა რეალისტური ხელოვნება, ექსპერიმენტზე დაფუძნებული მეცნიერება და განათლება. წიგნის ბეჭდვამ ცოდნის სწრაფი გავრცელება უზრუნველყო, რამაც საზოგადოებრივი ცნობიერება შეცვალა.  </p>
+                        <p class="text1" class="mb-4 text-gray-700">ჰუმანიზმისა და რენესანსის ეპოქამ ევროპაში ძირეული
+                            გარდატეხა მოახდინა. ამ პერიოდში შუა საუკუნეების რელიგიურ ცენტრზე დაფუძნებული მსოფლმხედველობა
+                            შეიცვალა ადამიანზე, მის გონებასა და შესაძლებლობებზე ორიენტირებული აზროვნებით. გაიზარდა
+                            ინტერესი ანტიკური კულტურის, მეცნიერებისა და ხელოვნების მიმართ.</p>
+                        <p class="mb-4 text-gray-700"> განვითარდა რეალისტური ხელოვნება, ექსპერიმენტზე დაფუძნებული
+                            მეცნიერება და განათლება. წიგნის ბეჭდვამ ცოდნის სწრაფი გავრცელება უზრუნველყო, რამაც
+                            საზოგადოებრივი ცნობიერება შეცვალა. </p>
                     </div>
                     <div>
-                        <p class="mb-4 text-gray-700">  </p>
-                        <p class="text-gray-700">ეკლესიის ავტორიტეტი თანდათან დასუსტდა, ხოლო ინდივიდუალიზმმა და თავისუფალმა აზროვნებამ ახალი ეპოქის საფუძველი შექმნა. ამ პროცესებმა ევროპა შუა საუკუნეებიდან თანამედროვე სამყაროსკენ გადმოიყვანა.   </p>
+                        <p class="mb-4 text-gray-700"> </p>
+                        <p class="text-gray-700">ეკლესიის ავტორიტეტი თანდათან დასუსტდა, ხოლო ინდივიდუალიზმმა და
+                            თავისუფალმა აზროვნებამ ახალი ეპოქის საფუძველი შექმნა. ამ პროცესებმა ევროპა შუა საუკუნეებიდან
+                            თანამედროვე სამყაროსკენ გადმოიყვანა. </p>
                     </div>
                 </div>
             </div>
@@ -399,13 +824,15 @@
     <!-- სტატიების გვერდი -->
     <div id="articles-page" class="page">
         <main class="container mx-auto px-4 py-8">
-            <button onclick="showPage('main')" class="mb-6 text-antique-600 hover:text-antique-800 font-medium flex items-center">
+            <button onclick="showPage('main')"
+                class="mb-6 text-antique-600 hover:text-antique-800 font-medium flex items-center">
                 <i class="fas fa-arrow-left mr-2"></i>უკან მთავარ გვერდზე
             </button>
-            
+
             <div class="text-center mb-12 antique-border p-6 bg-antique-50">
                 <h2 class="text-3xl md:text-4xl font-bold mb-4 text-antique-700">ისტორიული სტატიები</h2>
-                <p class="text-lg md:text-xl max-w-3xl mx-auto text-antique-600">შეისწავლეთ სხვადასხვა ისტორიული პერიოდები და მოვლენები</p>
+                <p class="text-lg md:text-xl max-w-3xl mx-auto text-antique-600">შეისწავლეთ სხვადასხვა ისტორიული
+                    პერიოდები და მოვლენები</p>
             </div>
 
             <!-- ყველა სტატიის ჩამონათვალი -->
@@ -413,48 +840,66 @@
                 <!-- სტატია 1 -->
                 <article class="card bg-white rounded-lg overflow-hidden">
                     <div class="p-6">
-                        <span class="text-sm bg-red-100 text-red-800 py-1 px-3 rounded-full mb-4 inline-block">ჰუმანიზმი და ადამიანი </span>
-                        <h3 class="text-xl font-bold mb-3 text-antique-700">ჰუმანიზმი – ადამიანის დაბრუნება ისტორიის ცენტრში </h3>
-                            <p class="humana">
-                              <ul><li>ჰუმანიზმი – ახალი მსოფლმხედველობა</li> <li>რა არის ჰუმანიზმი?</li>
- <li>მისი ძირითადი იდეები</li> </ul>
-                            </p>
-                        <a href="#" data-page="crusades" class="text-antique-600 hover:text-antique-800 font-medium"> <p class="sruli">სრულად ნახვა <i class="fas fa-arrow-right ml-1"> </i></a>
-                   </p>  </div> 
+                        <span class="text-sm bg-red-100 text-red-800 py-1 px-3 rounded-full mb-4 inline-block">ჰუმანიზმი
+                            და ადამიანი </span>
+                        <h3 class="text-xl font-bold mb-3 text-antique-700">ჰუმანიზმი – ადამიანის დაბრუნება ისტორიის
+                            ცენტრში </h3>
+                        <p class="humana">
+                        <ul>
+                            <li>ჰუმანიზმი – ახალი მსოფლმხედველობა</li>
+                            <li>რა არის ჰუმანიზმი?</li>
+                            <li>მისი ძირითადი იდეები</li>
+                        </ul>
+                        </p>
+                        <a href="#" data-page="crusades" class="text-antique-600 hover:text-antique-800 font-medium">
+                            <p class="sruli">სრულად ნახვა <i class="fas fa-arrow-right ml-1"> </i>
+                        </a>
+                        </p>
+                    </div>
                 </article>
 
                 <!-- სტატია 2 -->
                 <article class="card bg-white rounded-lg overflow-hidden">
                     <div class="p-6">
-                        <span class="text-sm bg-blue-100 text-blue-800 py-1 px-3 rounded-full mb-4 inline-block">რენესანსის ხელოვნება
+                        <span
+                            class="text-sm bg-blue-100 text-blue-800 py-1 px-3 rounded-full mb-4 inline-block">რენესანსის
+                            ხელოვნება
                         </span>
                         <h3 class="text-xl font-bold mb-3 text-antique-700">რენესანსის ხელოვნება</h3>
-                        <p class="mb-4 text-gray-700">რენესანსის პერიოდში ხელოვნებამ მიიღო ახალი ხასიათი, ფოკუსი გადაიტანა ადამიანზე და ბუნებრივ სილამაზეზე.</p>
-                        <a href="#" data-page="renaissance" class="text-antique-600 hover:text-antique-800 font-medium">სრულად ნახვა <i class="fas fa-arrow-right ml-1"></i></a>
+                        <p class="mb-4 text-gray-700">რენესანსის პერიოდში ხელოვნებამ მიიღო ახალი ხასიათი, ფოკუსი
+                            გადაიტანა ადამიანზე და ბუნებრივ სილამაზეზე.</p>
+                        <a href="#" data-page="renaissance"
+                            class="text-antique-600 hover:text-antique-800 font-medium">სრულად ნახვა <i
+                                class="fas fa-arrow-right ml-1"></i></a>
                     </div>
                 </article>
 
                 <!-- სტატია 3 -->
                 <article class="card bg-white rounded-lg overflow-hidden">
                     <div class="p-6">
-                        <span class="text-sm bg-green-100 text-green-800 py-1 px-3 rounded-full mb-4 inline-block">მეცნიერების აღზევება</span>
+                        <span
+                            class="text-sm bg-green-100 text-green-800 py-1 px-3 rounded-full mb-4 inline-block">მეცნიერების
+                            აღზევება</span>
                         <h3 class="text-xl font-bold mb-3 text-antique-700">გონება რწმენის გვერდით</h3>
-                        <p class="mb-4 text-gray-700"> <ul>
+                        <p class="mb-4 text-gray-700">
+                        <ul>
                             <li>მეცნიერება და ტექნოლოგია</li>
                             <li>ცვლილებები</li>
                             <li> მნიშვნელოვანი მეცნიერები</li>
-                            <li>გავლენა </li> 
+                            <li>გავლენა </li>
                             <li>მეცნიერული რევოლუცია</li>
                         </ul>
- 
-</p>
-                        <a href="#" data-page="georgian-renaissance" class="text-antique-600 hover:text-antique-800 font-medium"> <p class="sruli2"> სრულად ნახვა</p> 
-                         <div class="isari">   <i class="fas fa-arrow-right ml-1"></i> </div>
+
+                        </p>
+                        <a href="#" data-page="georgian-renaissance"
+                            class="text-antique-600 hover:text-antique-800 font-medium">
+                            <p class="sruli2"> სრულად ნახვა</p>
+                            <div class="isari"> <i class="fas fa-arrow-right ml-1"></i> </div>
                         </a>
                     </div>
                 </article>
-                
-                
+
+
             </div>
         </main>
     </div>
@@ -462,21 +907,30 @@
     <!-- გალერეის გვერდი -->
     <div id="gallery-page" class="page">
         <main class="container mx-auto px-4 py-8">
-            <button onclick="showPage('main')" class="mb-6 text-antique-600 hover:text-antique-800 font-medium flex items-center">
+            <button onclick="showPage('main')"
+                class="mb-6 text-antique-600 hover:text-antique-800 font-medium flex items-center">
                 <i class="fas fa-arrow-left mr-2"></i>უკან მთავარ გვერდზე
             </button>
-            
+
             <div class="text-center mb-12 antique-border p-6 bg-antique-50">
                 <h2 class="text-3xl md:text-4xl font-bold mb-4 text-antique-700">ისტორიული გალერეა</h2>
-                <p class="text-lg md:text-xl max-w-3xl mx-auto text-antique-600">თბილისის ისტორიული ფოტოები და ილუსტრაციები</p>
+                <p class="text-lg md:text-xl max-w-3xl mx-auto text-antique-600">თბილისის ისტორიული ფოტოები და
+                    ილუსტრაციები</p>
             </div>
 
             <!-- გალერეის ფილტრები -->
             <div class="flex flex-wrap gap-4 mb-8 justify-center">
-                <button class="filter-btn active bg-antique-600 text-white py-2 px-4 rounded-lg transition-colors" data-filter="all">ყველა</button>
-                <button class="filter-btn bg-antique-100 text-antique-800 py-2 px-4 rounded-lg hover:bg-antique-200 transition-colors" data-filter="tbilisi">თბილისი</button>
-                <button class="filter-btn bg-antique-100 text-antique-800 py-2 px-4 rounded-lg hover:bg-antique-200 transition-colors" data-filter="renaissance">რენესანსი</button>
-                <button class="filter-btn bg-antique-100 text-antique-800 py-2 px-4 rounded-lg hover:bg-antique-200 transition-colors" data-filter="crusades">ჯვაროსნული</button>
+                <button class="filter-btn active bg-antique-600 text-white py-2 px-4 rounded-lg transition-colors"
+                    data-filter="all">ყველა</button>
+                <button
+                    class="filter-btn bg-antique-100 text-antique-800 py-2 px-4 rounded-lg hover:bg-antique-200 transition-colors"
+                    data-filter="tbilisi">თბილისი</button>
+                <button
+                    class="filter-btn bg-antique-100 text-antique-800 py-2 px-4 rounded-lg hover:bg-antique-200 transition-colors"
+                    data-filter="renaissance">რენესანსი</button>
+                <button
+                    class="filter-btn bg-antique-100 text-antique-800 py-2 px-4 rounded-lg hover:bg-antique-200 transition-colors"
+                    data-filter="crusades">ჯვაროსნული</button>
             </div>
 
             <!-- გალერეის გრიდი -->
@@ -486,75 +940,306 @@
                     <img src="img/petrerko.jfif" alt="ძველი თბილისი" class="gallery-img w-full">
                     <div class="p-4">
                         <h4 class="font-bold text-lg mb-2 text-antique-700">ფრანჩესკო პეტრარკა (1304–1374)</h4>
-                        <p class="text-sm text-gray-600">რატომ არის მნიშვნელოვანი:
+                        <p class="text-sm text-gray-600">
+                        <p><b>როლი</b></p>: ჰუმანიზმის მამა
+                        <p><b>რატომ არის მნიშვნელოვანი:</b></p>
 
-ანტიკური ლიტერატურის ხელახალი აღმოჩენა
+                        ანტიკური ლიტერატურის ხელახალი აღმოჩენა
 
-ადამიანის გრძნობებისა და ინდივიდის მნიშვნელობის ხაზგასმა
-📌 ფოტო: კლასიკური პორტრეტი ლაურის გვირგვინით</p>
+                        ადამიანის გრძნობებისა და ინდივიდის მნიშვნელობის ხაზგასმა
+                        <p><b>ფოტო: </b></p> კლასიკური პორტრეტი ლაურის გვირგვინით
                     </div>
                 </div>
-                
+
                 <!-- სურათი 2 -->
                 <div class="gallery-item rounded-lg overflow-hidden bg-white shadow-md" data-category="renaissance">
-                    <img src="https://images.unsplash.com/photo-1578301978693-85fa9c0320b9?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="რენესანსის ხელოვნება" class="gallery-img w-full">
+                    <img src="img/renesansi2.jfif" alt="რენესანსის ხელოვნება" class="gallery-img w-full">
                     <div class="p-4">
-                        <h4 class="font-bold text-lg mb-2 text-antique-700">რენესანსის ხელოვნება</h4>
-                        <p class="text-sm text-gray-600">იტალიური რენესანსის პერიოდის ნამუშევარი</p>
+                        <h4 class="font-bold text-lg mb-2 text-antique-700">ლეონარდო და ვინჩი (1452–1519) </h4>
+                        <p class="text-sm text-gray-600">
+                        <p><b>როლი:</b></p> მხატვარი, მეცნიერი, ინჟინერი
+                        <p><b>მნიშვნელობა:</b></p>
+
+                        „მონა ლიზა“, „საიდუმლო სერობა“
+
+                        მეცნიერებისა და ხელოვნების შერწყმა
+                        <p><b>ფოტო</b></p> : მისი პორტრეტი + ნახაზები (ვიტრუვიუსის ადამიანი)</p>
                     </div>
                 </div>
-                
+
                 <!-- სურათი 3 -->
                 <div class="gallery-item rounded-lg overflow-hidden bg-white shadow-md" data-category="crusades">
-                    <img src="https://images.unsplash.com/photo-1580136607984-3c8f54d7c8b0?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="ჯვაროსნული ლაშქრობა" class="gallery-img w-full">
+                    <img src="img/kapela.jfif" alt="მხატვარი" class="gallery-img w-full">
                     <div class="p-4">
-                        <h4 class="font-bold text-lg mb-2 text-antique-700">ჯვაროსნული ლაშქრობა</h4>
-                        <p class="text-sm text-gray-600">ჯვაროსნების შეტაკება მუსლიმებთან</p>
+                        <h4 class="font-bold text-lg mb-2 text-antique-700">მიქელანჯელო ბუონაროტი (1475–1564)</h4>
+                        <p class="text-sm text-gray-600">
+                        <p><b>როლი:</b></p> მოქანდაკე, მხატვარი, არქიტექტორი
+                        <p><b>მნიშვნელობა:</b></p>
+
+                        დავითის ქანდაკება
+
+                        სიქსტის კაპელა
+                        <p><b>ფოტო</b></p>: დავითის ქანდაკება ან სიქსტის კაპელა</p>
                     </div>
                 </div>
-                
+
                 <!-- სურათი 4 -->
                 <div class="gallery-item rounded-lg overflow-hidden bg-white shadow-md" data-category="tbilisi">
-                    <img src="https://images.unsplash.com/photo-1620750033020-b2c6e5e1e8d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="თბილისის ციხე" class="gallery-img w-full">
+                    <img src="img/ital.jfif" alt="იტალიური ომები" class="gallery-img w-full">
                     <div class="p-4">
-                        <h4 class="font-bold text-lg mb-2 text-antique-700">თბილისის ციხე</h4>
-                        <p class="text-sm text-gray-600">ნარიყალას ციხე-სიმაგრე</p>
+                        <h4 class="font-bold text-lg mb-2 text-antique-700">იტალიური ომები (1494–1559)</h4>
+                        <p class="text-sm text-gray-600">
+                        <p><b>მონაწილეები:</b></p>
+                        საფრანგეთი, ესპანეთი, საღვთო რომის იმპერია, იტალიური ქალაქ-სახელმწიფოები
+
+                        <p><b>მნიშვნელობა:</b></p>
+
+
+                        იტალია გახდა ევროპის ძალთა ბრძოლის არენა
+
+                        რენესანსის გავრცელება მთელ ევროპაში
+                        <p><b>ფოტო</b></p> : შუასაუკუნეების/რენესანსის საბრძოლო ილუსტრაციები</p>
                     </div>
                 </div>
-                
+
                 <!-- სურათი 5 -->
                 <div class="gallery-item rounded-lg overflow-hidden bg-white shadow-md" data-category="renaissance">
-                    <img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="რენესანსის არქიტექტურა" class="gallery-img w-full">
+                    <img src="img/sack.jfif" alt="რომის გაძარცვა" class="gallery-img w-full">
                     <div class="p-4">
-                        <h4 class="font-bold text-lg mb-2 text-antique-700">რენესანსის არქიტექტურა</h4>
-                        <p class="text-sm text-gray-600">ფლორენციის კათედრალი</p>
+                        <h4 class="font-bold text-lg mb-2 text-antique-700">რომის გაძარცვა (Sack of Rome) – 1527 წელი
+                        </h4>
+                        <p class="text-sm text-gray-600">
+                        <p><b>მონაწილეები:</b></p>
+                        საღვთო რომის იმპერიის ჯარები
+
+                        <p><b>მნიშვნელობა:</b></p>
+
+                        რენესანსის დასუსტება იტალიაში
+
+                        ეკლესიის ავტორიტეტის შერყევა
+                        <p><b>ფოტო:</b></p> რომის გაძარცვის ისტორიული ნახატი</p>
                     </div>
                 </div>
-                
+
                 <!-- სურათი 6 -->
                 <div class="gallery-item rounded-lg overflow-hidden bg-white shadow-md" data-category="crusades">
-                    <img src="https://images.unsplash.com/photo-1578301978693-85fa9c0320b9?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="სალადინი" class="gallery-img w-full">
+                    <img src="img/lodi.jfif" alt="ლოდის ზავი" class="gallery-img w-full">
                     <div class="p-4">
-                        <h4 class="font-bold text-lg mb-2 text-antique-700">სალადინი</h4>
-                        <p class="text-sm text-gray-600">მუსლიმთა ლიდერი ჯვაროსნული ომების დროს</p>
+                        <h4 class="font-bold text-lg mb-2 text-antique-700">ლოდის ზავი (Peace of Lodi) – 1454</h4>
+                        <p class="text-sm text-gray-600">
+                        <p><b>მონაწილეები:</b></p>
+                        მილანი, ვენეცია, ფლორენცია, ნეაპოლი
+
+                        <p><b>მნიშვნელობა:</b></p>
+
+                        იტალიაში დროებითი მშვიდობა
+
+                        რენესანსის კულტურული აყვავების პირობების შექმნა
+                        <p><b>ფოტო:</b></p> იტალიური ქალაქების რუკა</p>
                     </div>
                 </div>
-                
+
                 <!-- სურათი 7 -->
                 <div class="gallery-item rounded-lg overflow-hidden bg-white shadow-md" data-category="tbilisi">
-                    <img src="https://images.unsplash.com/photo-1593693399746-2d5fd75d5a16?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="თბილისის ძველი სახლები" class="gallery-img w-full">
+                    <img src="img/kato.jfif" alt="კატო-კამბრეზის ზავი" class="gallery-img w-full">
                     <div class="p-4">
-                        <h4 class="font-bold text-lg mb-2 text-antique-700">თბილისის ძველი სახლები</h4>
-                        <p class="text-sm text-gray-600">ტრადიციული ქართული არქიტექტურა</p>
+                        <h4 class="font-bold text-lg mb-2 text-antique-700">კატო-კამბრეზის ზავი – 1559</h4>
+                        <p class="text-sm text-gray-600">
+                        <p><b>მონაწილეები:</b></p>
+                        საფრანგეთი და ესპანეთი
+
+                        <p><b>მნიშვნელობა:</b></p>
+
+                        იტალიური ომების დასრულება
+
+                        ესპანეთის გაძლიერება ევროპაში
+                        <p><b>ფოტო:</b></p> ხელშეკრულების ილუსტრაცია ან რუკა</p>
                     </div>
                 </div>
-                
+
                 <!-- სურათი 8 -->
                 <div class="gallery-item rounded-lg overflow-hidden bg-white shadow-md" data-category="renaissance">
-                    <img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="დავინჩი" class="gallery-img w-full">
+                    <img src="img/nikol.jfif" alt="ნიკოლაუს კოპერნიკი" class="gallery-img w-full">
                     <div class="p-4">
-                        <h4 class="font-bold text-lg mb-2 text-antique-700">ლეონარდო და ვინჩი</h4>
-                        <p class="text-sm text-gray-600">რენესანსის პერიოდის გენიოსი</p>
+                        <h4 class="font-bold text-lg mb-2 text-antique-700">ნიკოლაუს კოპერნიკი (1473–1543)</h4>
+                        <p class="text-sm text-gray-600">
+                        <p><b>როლი:</b></p> ასტრონომი
+                        <p><b>მნიშვნელობა:</b></p>
+
+                        ჰელიოცენტრული თეორია
+
+                        დედამიწა ბრუნავს მზის გარშემო
+                        <p><b>ფოტო:</b></p> პორტრეტი + მზის სისტემის სქემა</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- ფაქტების გვერდი - ახალი -->
+    <div id="facts-page" class="page">
+        <main class="container mx-auto px-4 py-8">
+            <button onclick="showPage('main')"
+                class="mb-6 text-antique-600 hover:text-antique-800 font-medium flex items-center">
+                <i class="fas fa-arrow-left mr-2"></i>უკან მთავარ გვერდზე
+            </button>
+
+            <div class="text-center mb-12 antique-border p-6 bg-antique-50">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-antique-700">ჰუმანიზმისა და რენესანსის საინტერესო
+                    ფაქტები</h2>
+                <p class="text-lg md:text-xl max-w-3xl mx-auto text-antique-600">გაეცანით ყველაზე საინტერესო და
+                    მნიშვნელოვან ფაქტებს XIV-XVI საუკუნეების ევროპის შესახებ</p>
+            </div>
+
+            <!-- ფაქტების გრიდი -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+                <!-- ფაქტი 1 -->
+                <article class="fact-card bg-white rounded-lg overflow-hidden">
+                    <img src="img/florencia.jfif"
+                        alt="რენესანსის ფლორენცია" class="fact-img w-full">
+                    <div class="p-6">
+                        <div class="flex items-center mb-3">
+                            <i class="fact-icon fas fa-city"></i>
+                            <span class="text-sm bg-red-100 text-red-800 py-1 px-3 rounded-full">ფლორენცია</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-antique-700">რენესანსის დედაქალაქი</h3>
+                        <p class="text-gray-700 mb-4">ფლორენცია ითვლებოდა რენესანსის დედაქალაქად. აქ მოღვაწეობდნენ
+                            ლეონარდო და ვინჩი, მიქელანჯელო და რაფაელი. ქალაქის უმდიდრესი მფარველები, მედიჩის ოჯახი, დიდ
+                            ფულს ხარჯავდნენ ხელოვნებისა და მეცნიერების მხარდასაჭერად.</p>
+                        <div class="text-sm text-antique-600 font-medium">
+                            <i class="fas fa-calendar-alt mr-1"></i> XV საუკუნე
+                        </div>
+                    </div>
+                </article>
+
+                <!-- ფაქტი 2 -->
+                <article class="fact-card bg-white rounded-lg overflow-hidden">
+                    <img src="img/ევროპ.jfif"
+                        alt="ბეჭდვის პრესა" class="fact-img w-full">
+                    <div class="p-6">
+                        <div class="flex items-center mb-3">
+                            <i class="fact-icon fas fa-print"></i>
+                            <span class="text-sm bg-blue-100 text-blue-800 py-1 px-3 rounded-full">ტექნოლოგია</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-antique-700">ბეჭდვის რევოლუცია</h3>
+                        <p class="text-gray-700 mb-4">გუტენბერგის ბეჭდვის პრესის გამოგონებამ (1440) რევოლუცია მოახდინა.
+                            50 წლის განმავლობაში ევროპაში დაიბეჭდა 20 მილიონზე მეტი წიგნი - მეტი, ვიდრე ყველა წინა
+                            პერიოდში ერთად. ეს გახდა ცოდნის დემოკრატიზაციის საფუძველი.</p>
+                        <div class="text-sm text-antique-600 font-medium">
+                            <i class="fas fa-calendar-alt mr-1"></i> 1440 წელი
+                        </div>
+                    </div>
+                </article>
+
+                <!-- ფაქტი 3 -->
+                <article class="fact-card bg-white rounded-lg overflow-hidden">
+                    <img src="img/ჰუმანიზმი.jfif" alt="ჰუმანიზმის წიგნები" class="fact-img w-full">
+                    <div class="p-6">
+                        <div class="flex items-center mb-3">
+                            <i class="fact-icon fas fa-book"></i>
+                            <span class="text-sm bg-green-100 text-green-800 py-1 px-3 rounded-full">განათლება</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-antique-700">განათლების რეფორმა</h3>
+                        <p class="text-gray-700 mb-4">ჰუმანისტებმა შეცვალეს განათლების სისტემა. სკოლებში დაემატა ახალი
+                            საგნები: გრამატიკა, რიტორიკა, ისტორია, ბერძნული ენა. მიზანი იყო არა მხოლოდ სასულიერო
+                            პირების, არამედ კეთილგანწყობილი და განათლებული მოქალაქეების აღზრდა.</p>
+                        <div class="text-sm text-antique-600 font-medium">
+                            <i class="fas fa-calendar-alt mr-1"></i> XIV-XV საუკუნეები
+                        </div>
+                    </div>
+                </article>
+
+                <!-- ფაქტი 4 -->
+                <article class="fact-card bg-white rounded-lg overflow-hidden">
+                    <img src="img/ეკლესია.jfif" alt="ეკლესიის კრიტიკა" class="fact-img w-full">
+                    <div class="p-6">
+                        <div class="flex items-center mb-3">
+                            <i class="fact-icon fas fa-church"></i>
+                            <span class="text-sm bg-purple-100 text-purple-800 py-1 px-3 rounded-full">რელიგია</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-antique-700">ეკლესიის კრიტიკა</h3>
+                        <p class="text-gray-700 mb-4">რენესანსის პერიოდში დაიწყო ეკლესიის კრიტიკა. ერაზმუს როტერდამელის
+                            და მარტინ ლუთერის ნაშრომებმა საფუძველი ჩაუყარა რეფორმაციას. ხალხი მოითხოვდა ეკლესიის
+                            რეფორმას და რელიგიური ცხოვრების გამარტივებას.</p>
+                        <div class="text-sm text-antique-600 font-medium">
+                            <i class="fas fa-calendar-alt mr-1"></i> XV-XVI საუკუნეები
+                        </div>
+                    </div>
+                </article>
+
+                <!-- ფაქტი 5 -->
+                <article class="fact-card bg-white rounded-lg overflow-hidden">
+                    <img src="img/nikol.jfif" alt="მეცნიერები" class="fact-img w-full">
+                    <div class="p-6">
+                        <div class="flex items-center mb-3">
+                            <i class="fact-icon fas fa-flask"></i>
+                            <span class="text-sm bg-yellow-100 text-yellow-800 py-1 px-3 rounded-full">მეცნიერება</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-antique-700">მეცნიერული რევოლუცია</h3>
+                        <p class="text-gray-700 mb-4">კოპერნიკის, კეპლერის და გალილეოს მიერ დაწყებულმა მეცნიერულმა
+                            რევოლუციამ შეცვალა ადამიანის გაგება სამყაროს შესახებ. დედამიწა აღარ იყო სამყაროს ცენტრი,
+                            არამედ მზის გარშემო მბრუნავი პლანეტა.</p>
+                        <div class="text-sm text-antique-600 font-medium">
+                            <i class="fas fa-calendar-alt mr-1"></i> XVI საუკუნე
+                        </div>
+                    </div>
+                </article>
+
+                <!-- ფაქტი 6 -->
+                <article class="fact-card bg-white rounded-lg overflow-hidden">
+                    <img src="img/renesansi2.jfif" alt="ხელოვნების პატრონები" class="fact-img w-full">
+                    <div class="p-6">
+                        <div class="flex items-center mb-3">
+                            <i class="fact-icon fas fa-hand-holding-usd"></i>
+                            <span class="text-sm bg-indigo-100 text-indigo-800 py-1 px-3 rounded-full">ეკონომიკა</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-antique-700">ხელოვნების პატრონები</h3>
+                        <p class="text-gray-700 mb-4">მდიდარი ბანკირები და ვაჭრები ხდებოდნენ ხელოვნების პატრონები.
+                            მედიჩის ოჯახი ფლორენციაში, სფორცები მილანში და პაპები რომში დიდ ფულს ხარჯავდნენ ხელოვნების
+                            ნიმუშების შექმნაზე, რაც გახდა სტატუსის სიმბოლო.</p>
+                        <div class="text-sm text-antique-600 font-medium">
+                            <i class="fas fa-calendar-alt mr-1"></i> XV-XVI საუკუნეები
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- დამატებითი საინტერესო ფაქტები -->
+            <div class="bg-antique-50 p-8 rounded-lg shadow-inner mb-12">
+                <h3 class="text-2xl font-bold mb-6 text-center text-antique-700">დამატებითი საინტერესო ფაქტები</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-600 mt-1 mr-3"></i>
+                                <span class="text-gray-700">ჩანგლის „შემოჭრა“: XIV საუკუნემდე ევროპაში ძირითადად ხელით ან დანით ჭამდნენ. ჩანგალი იტალიიდან გავრცელდა, თუმცა თავიდან მას „ზედმეტ ფუფუნებად“ და ღვთისგმობადაც კი მიიჩნევდნენ.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-600 mt-1 mr-3"></i>
+                                <span class="text-gray-700">ტიტების მანია: XVI საუკუნის ბოლოს ტიტები ევროპაში (განსაკუთრებით ნიდერლანდებში) ისეთი პოპულარული გახდა, რომ ერთი ბოლქვი ხშირად სახლზე მეტი ღირდა. ეს იყო ისტორიაში პირველი ცნობილი ფინანსური „ბუშტი“.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-600 mt-1 mr-3"></i>
+                                <span class="text-gray-700">ლეონარდო და ვინჩის დღიურები: რენესანსის გენიოსი თავის ჩანაწერებს „სარკისებური დამწერლობით“ აკეთებდა (მარჯვნიდან მარცხნივ), რათა სხვებს მისი იდეები ადვილად არ ამოეკითხათ..</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-600 mt-1 mr-3"></i>
+                                <span class="text-gray-700">ჰიგიენის პარადოქსი: შუა საუკუნეებში ხალხი უფრო ხშირად ბანაობდა საზოგადოებრივ აბანოებში, ვიდრე XVI-XVII საუკუნეებში. მოგვიანებით გავრცელდა მცდარი აზრი, რომ წყალი ფორებს ხსნის და დაავადებები ორგანიზმში ასე აღწევს, ამიტომ ბანაობას ერიდებოდნენ.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-600 mt-1 mr-3"></i>
+                                <span class="text-gray-700">ალენდრის ცვლილება: 1582 წელს პაპმა გრიგოლ XIII-მ შემოიღო გრიგორიანული კალენდარი (ახალი სტილი), რადგან ძველი (იულიუსის) კალენდარი ასტრონომიულ დროს ჩამორჩებოდა.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-600 mt-1 mr-3"></i>
+                                <span class="text-gray-700">პირველი საჯარო ბიბლიოთეკები გაჩნდა რენესანსის პერიოდში,
+                                    რამაც ცოდნა უფრო ხელმისაწვდომი გახადა ყველასთვის</span>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -564,20 +1249,22 @@
     <!-- კონტაქტის გვერდი -->
     <div id="contact-page" class="page">
         <main class="container mx-auto px-4 py-8">
-            <button onclick="showPage('main')" class="mb-6 text-antique-600 hover:text-antique-800 font-medium flex items-center">
+            <button onclick="showPage('main')"
+                class="mb-6 text-antique-600 hover:text-antique-800 font-medium flex items-center">
                 <i class="fas fa-arrow-left mr-2"></i>უკან მთავარ გვერდზე
             </button>
-            
+
             <div class="text-center mb-12 antique-border p-6 bg-antique-50">
                 <h2 class="text-3xl md:text-4xl font-bold mb-4 text-antique-700">კონტაქტი</h2>
-                <p class="text-lg md:text-xl max-w-3xl mx-auto text-antique-600">დაგვიკავშირდით კითხვებისა და შემოთავაზებების ქონის შემთხვევაში</p>
+                <p class="text-lg md:text-xl max-w-3xl mx-auto text-antique-600">დაგვიკავშირდით კითხვებისა და
+                    შემოთავაზებების ქონის შემთხვევაში</p>
             </div>
 
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-12">
                 <!-- კონტაქტის ინფორმაცია -->
                 <div>
                     <h3 class="text-2xl font-bold mb-6 text-antique-700">კონტაქტის ინფორმაცია</h3>
-                    
+
                     <div class="space-y-6">
                         <div class="flex items-start">
                             <div class="bg-antique-100 p-3 rounded-lg mr-4">
@@ -588,7 +1275,7 @@
                                 <p class="text-gray-700">სსიპ ქ. თბლისის 45 საჯარო სკოლა. 11გ კლასი</p>
                             </div>
                         </div>
-                        
+
                         <div class="flex items-start">
                             <div class="bg-antique-100 p-3 rounded-lg mr-4">
                                 <i class="fas fa-envelope text-antique-600 text-xl"></i>
@@ -598,17 +1285,18 @@
                                 <p class="text-gray-700">istoriuliarkivi@gmail.com</p>
                             </div>
                         </div>
-                        
+
                         <div class="flex items-start">
                             <div class="bg-antique-100 p-3 rounded-lg mr-4">
                                 <i class="fas fa-phone text-antique-600 text-xl"></i>
                             </div>
                             <div>
                                 <h4 class="font-bold text-lg mb-1 text-antique-700">ტელეფონი</h4>
-                                <p class="text-gray-700">+995 32 2 12 34 56</p>
+                                <p class="text-gray-700">+995 592 08 27 09</p>
+                               
                             </div>
                         </div>
-                        
+
                         <div class="flex items-start">
                             <div class="bg-antique-100 p-3 rounded-lg mr-4">
                                 <i class="fas fa-clock text-antique-600 text-xl"></i>
@@ -621,59 +1309,68 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <!-- სოციალური ქსელები -->
                     <div class="mt-8">
                         <h4 class="font-bold text-lg mb-4 text-antique-700">გამოგვყევით სოციალურ ქსელებში</h4>
                         <div class="flex space-x-4">
-                            <a href="#" class="bg-antique-600 text-white p-3 rounded-lg hover:bg-antique-700 transition-colors">
+                            <a href="#"
+                                class="bg-antique-600 text-white p-3 rounded-lg hover:bg-antique-700 transition-colors">
                                 <i class="fab fa-facebook-f"></i>
                             </a>
-                            <a href="#" class="bg-antique-600 text-white p-3 rounded-lg hover:bg-antique-700 transition-colors">
+                            <a href="#"
+                                class="bg-antique-600 text-white p-3 rounded-lg hover:bg-antique-700 transition-colors">
                                 <i class="fab fa-twitter"></i>
                             </a>
-                            <a href="#" class="bg-antique-600 text-white p-3 rounded-lg hover:bg-antique-700 transition-colors">
+                            <a href="#"
+                                class="bg-antique-600 text-white p-3 rounded-lg hover:bg-antique-700 transition-colors">
                                 <i class="fab fa-instagram"></i>
                             </a>
-                            <a href="#" class="bg-antique-600 text-white p-3 rounded-lg hover:bg-antique-700 transition-colors">
+                            <a href="#"
+                                class="bg-antique-600 text-white p-3 rounded-lg hover:bg-antique-700 transition-colors">
                                 <i class="fab fa-youtube"></i>
                             </a>
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- საკონტაქტო ფორმა -->
                 <div>
                     <h3 class="text-2xl font-bold mb-6 text-antique-700">დაგვიკავშირდით</h3>
-                    
+
                     <form id="contact-form" class="space-y-6">
-                         <div>
+                        <div>
                             <label for="name" class="block mb-2 font-medium text-gray-700">სახელი და გვარი</label>
-                            <input type="text" id="name" class="contact-input w-full p-3 rounded-lg focus:outline-none" required>
+                            <input type="text" id="name" class="contact-input w-full p-3 rounded-lg focus:outline-none"
+                                required>
                         </div>
-                        
+
                         <div>
                             <label for="email" class="block mb-2 font-medium text-gray-700">ელ. ფოსტა</label>
-                            <input type="email" id="email" class="contact-input w-full p-3 rounded-lg focus:outline-none" required>
+                            <input type="email" id="email"
+                                class="contact-input w-full p-3 rounded-lg focus:outline-none" required>
                         </div>
-                        
+
                         <div>
                             <label for="subject" class="block mb-2 font-medium text-gray-700">თემა</label>
-                            <select id="subject" class="contact-input w-full p-3 rounded-lg focus:outline-none" required>
+                            <select id="subject" class="contact-input w-full p-3 rounded-lg focus:outline-none"
+                                required>
                                 <option value="">აირჩიეთ თემა</option>
                                 <option value="question">კითხვა</option>
                                 <option value="collaboration">თანამშრომლობა</option>
                                 <option value="suggestion">წინადადება</option>
                                 <option value="other">სხვა</option>
                             </select>
-                        </div> -->
-                        
+                        </div>
+
                         <div>
                             <label for="message" class="block mb-2 font-medium text-gray-700">შეტყობინება</label>
-                            <textarea id="message" rows="5" class="contact-input w-full p-3 rounded-lg focus:outline-none" required></textarea>
+                            <textarea id="message" rows="5"
+                                class="contact-input w-full p-3 rounded-lg focus:outline-none" required></textarea>
                         </div>
-                        
-                        <button type="submit" class="bg-antique-600 text-white font-medium py-3 px-6 rounded-lg hover:bg-antique-700 transition-colors w-full">
+
+                        <button type="submit"
+                            class="bg-antique-600 text-white font-medium py-3 px-6 rounded-lg hover:bg-antique-700 transition-colors w-full">
                             გაგზავნა
                         </button>
                     </form>
@@ -682,68 +1379,82 @@
         </main>
     </div>
 
-    <!-- ისტორიული თემების გვერდები (ჯვაროსნული ლაშქრობები, რენესანსი, ქართული რენესანსი) -->
-    <!-- ეს გვერდები უკვე გაწერილია თქვენს კოდში, მე დავამატებ მხოლოდ back ღილაკებს -->
-    
-    <!-- ჯვაროსნული ლაშქრობების გვერდი -->
+    <!-- ისტორიული თემების გვერდები -->
+
+    <!-- ჰუმანიზმის გვერდი -->
     <div id="crusades-page" class="page">
         <main class="container mx-auto px-4 py-8">
-            <button onclick="showPage('articles')" class="mb-6 text-antique-600 hover:text-antique-800 font-medium flex items-center">
+            <button onclick="showPage('articles')"
+                class="mb-6 text-antique-600 hover:text-antique-800 font-medium flex items-center">
                 <i class="fas fa-arrow-left mr-2"></i>უკან სტატიებზე
             </button>
-            
-            <!-- აქ ჩასვით თქვენი ჯვაროსნული ლაშქრობების გვერდის კონტენტი -->
-            <div class="text-center mb-12 antique-border p-6 bg-antique-50">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-antique-700">ჰუმანიზმი – ადამიანის დაბრუნება ისტორიის ცენტრში</h2>
-                <p class="text-lg md:text-xl max-w-3xl mx-auto text-antique-600">ჰუმანიზმი გახდა ის ინტელექტუალური მოძრაობა, რომელმაც ევროპაში ადამიანის როლი თავიდან განსაზღვრა. თუ შუა საუკუნეებში ადამიანი საკუთარ თავს ხედავდა როგორც ცოდვილ არსებას, რომელიც მხოლოდ ღმერთის ნებას ემორჩილება, ჰუმანიზმმა წამოაყენა იდეა, რომ ადამიანი გონიერი, შემოქმედი და დამოუკიდებლად მოაზროვნე არსებაა. ჰუმანისტები სწავლობდნენ ანტიკურ ავტორებს – პლატონს, არისტოტელეს, ციცერონს – და მათ ნაშრომებში ადამიანის ღირსებისა და გონების მნიშვნელობას ხედავდნენ.
 
-ჰუმანიზმმა დიდი გავლენა მოახდინა განათლებაზე. სკოლებში და უნივერსიტეტებში გაჩნდა ახალი საგნები: გრამატიკა, რიტორიკა, ისტორია, ფილოსოფია. განათლების მიზანი აღარ იყო მხოლოდ სასულიერო პირის აღზრდა; იგი ემსახურებოდა სრულფასოვანი, კრიტიკულად მოაზროვნე პიროვნების ჩამოყალიბებას. ამან ხელი შეუწყო თავისუფალი აზროვნების, ინდივიდუალიზმისა და პასუხისმგებლობის განვითარებას, რაც საბოლოოდ თანამედროვე ევროპის საფუძვლად იქცა..</p>
+            <div class="text-center mb-12 antique-border p-6 bg-antique-50">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-antique-700">ჰუმანიზმი – ადამიანის დაბრუნება
+                    ისტორიის ცენტრში</h2>
+                <p class="text-lg md:text-xl max-w-3xl mx-auto text-antique-600">ჰუმანიზმი გახდა ის ინტელექტუალური
+                    მოძრაობა, რომელმაც ევროპაში ადამიანის როლი თავიდან განსაზღვრა. თუ შუა საუკუნეებში ადამიანი საკუთარ
+                    თავს ხედავდა როგორც ცოდვილ არსებას, რომელიც მხოლოდ ღმერთის ნებას ემორჩილება, ჰუმანიზმმა წამოაყენა
+                    იდეა, რომ ადამიანი გონიერი, შემოქმედი და დამოუკიდებლად მოაზროვნე არსებაა. ჰუმანისტები სწავლობდნენ
+                    ანტიკურ ავტორებს – პლატონს, არისტოტელეს, ციცერონს – და მათ ნაშრომებში ადამიანის ღირსებისა და გონების
+                    მნიშვნელობას ხედავდნენ.
+
+                    ჰუმანიზმმა დიდი გავლენა მოახდინა განათლებაზე. სკოლებში და უნივერსიტეტებში გაჩნდა ახალი საგნები:
+                    გრამატიკა, რიტორიკა, ისტორია, ფილოსოფია. განათლების მიზანი აღარ იყო მხოლოდ სასულიერო პირის აღზრდა;
+                    იგი ემსახურებოდა სრულფასოვანი, კრიტიკულად მოაზროვნე პიროვნების ჩამოყალიბებას. ამან ხელი შეუწყო
+                    თავისუფალი აზროვნების, ინდივიდუალიზმისა და პასუხისმგებლობის განვითარებას, რაც საბოლოოდ თანამედროვე
+                    ევროპის საფუძვლად იქცა.</p>
             </div>
-            
-            <!-- დროის ხაზი და სხვა კონტენტი -->
-            <!-- ... -->
         </main>
     </div>
 
     <!-- იტალიური რენესანსის გვერდი -->
     <div id="renaissance-page" class="page">
         <main class="container mx-auto px-4 py-8">
-            <button onclick="showPage('articles')" class="mb-6 text-antique-600 hover:text-antique-800 font-medium flex items-center">
+            <button onclick="showPage('articles')"
+                class="mb-6 text-antique-600 hover:text-antique-800 font-medium flex items-center">
                 <i class="fas fa-arrow-left mr-2"></i>უკან სტატიებზე
             </button>
-            
-            <!-- აქ ჩასვით თქვენი რენესანსის გვერდის კონტენტი -->
+
             <div class="text-center mb-12 antique-border p-6 bg-antique-50">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-antique-700">რენესანსის ხელოვნება – სილამაზისა და რეალობის შერწყმა</h2>
-                <p class="text-lg md:text-xl max-w-3xl mx-auto text-antique-600">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-antique-700">რენესანსის ხელოვნება – სილამაზისა და
+                    რეალობის შერწყმა</h2>
+                <p class="text-lg md:text-xl max-w-3xl mx-auto text-antique-600">რენესანსის ეპოქაში ხელოვნება სრულიად
+                    ახალი მიმართულებით განვითარდა. მხატვრები და მოქანდაკეები აღარ ქმნიდნენ მხოლოდ რელიგიურ, სიმბოლურ
+                    გამოსახულებებს – ისინი ცდილობდნენ ადამიანის რეალური გარეგნობის, ემოციებისა და მოძრაობის გადმოცემას.
+                    ანატომიის ცოდნა, პერსპექტივის გამოყენება და სინათლე-ჩრდილის ტექნიკა ხელოვნებას უფრო ცოცხალსა და
+                    დამაჯერებელს ხდიდა.
 
-რენესანსის ეპოქაში ხელოვნება სრულიად ახალი მიმართულებით განვითარდა. მხატვრები და მოქანდაკეები აღარ ქმნიდნენ მხოლოდ რელიგიურ, სიმბოლურ გამოსახულებებს – ისინი ცდილობდნენ ადამიანის რეალური გარეგნობის, ემოციებისა და მოძრაობის გადმოცემას. ანატომიის ცოდნა, პერსპექტივის გამოყენება და სინათლე-ჩრდილის ტექნიკა ხელოვნებას უფრო ცოცხალსა და დამაჯერებელს ხდიდა.
-
-ლეონარდო და ვინჩი, მიქელანჯელო და რაფაელი არა მხოლოდ ხელოვანები, არამედ მოაზროვნეები და მკვლევრები იყვნენ. მათი ნამუშევრები აერთიანებდა მეცნიერებასა და ესთეტიკას. ხელოვნება გადაიქცა ადამიანის შესაძლებლობების დემონსტრაციად და არა მხოლოდ ღვთის სადიდებლად შექმნილ საშუალებად. ამ ცვლილებამ ხელოვანს მაღალი სოციალური სტატუსი მიანიჭა და ხელოვნება ევროპული კულტურის ერთ-ერთ მთავარ საყრდენად აქცია.</p>
+                    ლეონარდო და ვინჩი, მიქელანჯელო და რაფაელი არა მხოლოდ ხელოვანები, არამედ მოაზროვნეები და მკვლევრები
+                    იყვნენ. მათი ნამუშევრები აერთიანებდა მეცნიერებასა და ესთეტიკას. ხელოვნება გადაიქცა ადამიანის
+                    შესაძლებლობების დემონსტრაციად და არა მხოლოდ ღვთის სადიდებლად შექმნილ საშუალებად. ამ ცვლილებამ
+                    ხელოვანს მაღალი სოციალური სტატუსი მიანიჭა და ხელოვნება ევროპული კულტურის ერთ-ერთ მთავარ საყრდენად
+                    აქცია.</p>
             </div>
-            
-            <!-- დროის ხაზი და სხვა კონტენტი -->
-            <!-- ... -->
         </main>
     </div>
 
-    <!-- ქართული რენესანსის გვერდი -->
+    <!-- მეცნიერების გვერდი -->
     <div id="georgian-renaissance-page" class="page">
         <main class="container mx-auto px-4 py-8">
-            <button onclick="showPage('articles')" class="mb-6 text-antique-600 hover:text-antique-800 font-medium flex items-center">
+            <button onclick="showPage('articles')"
+                class="mb-6 text-antique-600 hover:text-antique-800 font-medium flex items-center">
                 <i class="fas fa-arrow-left mr-2"></i>უკან სტატიებზე
             </button>
-            
-            <!-- აქ ჩასვით თქვენი ქართული რენესანსის გვერდის კონტენტი -->
-            <div class="text-center mb-12 antique-border p-6 bg-antique-50">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-antique-700">მეცნიერების აღზევება </h2>
-                <p class="text-lg md:text-xl max-w-3xl mx-auto text-antique-600">რენესანსმა მეცნიერებას მისცა ახალი მიმართულება: დაკვირვება, ექსპერიმენტი და ლოგიკური ანალიზი. თუ ადრე ცოდნა ძირითადად ავტორიტეტებზე და ეკლესიის სწავლებაზე იყო დაფუძნებული, ახლა მეცნიერები ბუნებას თავად აკვირდებოდნენ. კოპერნიკის ჰელიოცენტრულმა თეორიამ და გალილეო გალილეის კვლევებმა ეჭვქვეშ დააყენა საუკუნეების განმავლობაში დამკვიდრებული შეხედულებები სამყაროზე.
 
-მეცნიერების განვითარებამ შეცვალა ადამიანის დამოკიდებულება სამყაროს მიმართ. ბუნება აღარ აღიქმებოდა მხოლოდ ღვთის საიდუმლოდ – იგი გახდა შესასწავლი და გასააზრებელი სისტემა. ეს პროცესი საფუძვლად დაედო მეცნიერულ რევოლუციას და თანამედროვე მეცნიერების ჩამოყალიბებას. საბოლოოდ, ცოდნამ დაიწყო პრაქტიკული გამოყენება ტექნიკაში, მედიცინასა და ყოველდღიურ ცხოვრებაში.</p>
+            <div class="text-center mb-12 antique-border p-6 bg-antique-50">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-antique-700">მეცნიერების აღზევება</h2>
+                <p class="text-lg md:text-xl max-w-3xl mx-auto text-antique-600">რენესანსმა მეცნიერებას მისცა ახალი
+                    მიმართულება: დაკვირვება, ექსპერიმენტი და ლოგიკური ანალიზი. თუ ადრე ცოდნა ძირითადად ავტორიტეტებზე და
+                    ეკლესიის სწავლებაზე იყო დაფუძნებული, ახლა მეცნიერები ბუნებას თავად აკვირდებოდნენ. კოპერნიკის
+                    ჰელიოცენტრულმა თეორიამ და გალილეო გალილეის კვლევებმა ეჭვქვეშ დააყენა საუკუნეების განმავლობაში
+                    დამკვიდრებული შეხედულებები სამყაროზე.
+
+                    მეცნიერების განვითარებამ შეცვალა ადამიანის დამოკიდებულება სამყაროს მიმართ. ბუნება აღარ აღიქმებოდა
+                    მხოლოდ ღვთის საიდუმლოდ – იგი გახდა შესასწავლი და გასააზრებელი სისტემა. ეს პროცესი საფუძვლად დაედო
+                    მეცნიერულ რევოლუციას და თანამედროვე მეცნიერების ჩამოყალიბებას. საბოლოოდ, ცოდნამ დაიწყო პრაქტიკული
+                    გამოყენება ტექნიკაში, მედიცინასა და ყოველდღიურ ცხოვრებაში.</p>
             </div>
-            
-            <!-- დროის ხაზი და სხვა კონტენტი -->
-            <!-- ... -->
         </main>
     </div>
 
@@ -753,27 +1464,46 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div>
                     <h4 class="text-xl font-bold mb-4 font-cinzel">თბილისის ისტორიული არქივი</h4>
-                    <p class="text-antique-200">აღნიშნული ინფორმაციის გავრცელების მიზანია, საზოგადოებაში ისტორიული ცნობიერების ამაღლება და იმის ჩვენება, თუ როგორ განსაზღვრავს წარსული ეპოქების გამოცდილება თანამედროვე სამყაროს განვითარებას.</p>
+                    <p class="text-antique-200">აღნიშნული ინფორმაციის გავრცელების მიზანია, საზოგადოებაში ისტორიული
+                        ცნობიერების ამაღლება და იმის ჩვენება, თუ როგორ განსაზღვრავს წარსული ეპოქების გამოცდილება
+                        თანამედროვე სამყაროს განვითარებას.</p>
                 </div>
                 <div>
                     <h4 class="text-xl font-bold mb-4 font-cinzel">სწრაფი ბმულები</h4>
                     <ul class="space-y-2">
-                        <li><a href="#" data-page="main" class="hover:text-antique-300 transition-colors flex items-center"><i class="fas fa-home mr-2"></i> მთავარი გვერდი</a></li>
-                        <li><a href="#" data-page="articles" class="hover:text-antique-300 transition-colors flex items-center"><i class="fas fa-newspaper mr-2"></i> სტატიები</a></li>
-                        <li><a href="#" data-page="gallery" class="hover:text-antique-300 transition-colors flex items-center"><i class="fas fa-images mr-2"></i> გალერეა</a></li>
-                        <li><a href="#" data-page="contact" class="hover:text-antique-300 transition-colors flex items-center"><i class="fas fa-envelope mr-2"></i> კონტაქტი</a></li>
+                        <li><a href="#" data-page="main"
+                                class="hover:text-antique-300 transition-colors flex items-center"><i
+                                    class="fas fa-home mr-2"></i> მთავარი გვერდი</a></li>
+                        <li><a href="#" data-page="articles"
+                                class="hover:text-antique-300 transition-colors flex items-center"><i
+                                    class="fas fa-newspaper mr-2"></i> სტატიები</a></li>
+                        <li><a href="#" data-page="gallery"
+                                class="hover:text-antique-300 transition-colors flex items-center"><i
+                                    class="fas fa-images mr-2"></i> გალერეა</a></li>
+                        <li><a href="#" data-page="facts"
+                                class="hover:text-antique-300 transition-colors flex items-center"><i
+                                    class="fas fa-lightbulb mr-2"></i> ფაქტები</a></li>
+                        <li><a href="#" data-page="contact"
+                                class="hover:text-antique-300 transition-colors flex items-center"><i
+                                    class="fas fa-envelope mr-2"></i> კონტაქტი</a></li>
                     </ul>
                 </div>
                 <div>
                     <h4 class="text-xl font-bold mb-4 font-cinzel">კონტაქტი</h4>
-                    <p class="mb-2 flex items-center"><i class="fas fa-map-marker-alt mr-2"></i> სსიპ ქალაქ თბილისის 45-ე საჯარო სკოლა</p>
+                    <p class="mb-2 flex items-center"><i class="fas fa-map-marker-alt mr-2"></i> სსიპ ქალაქ თბილისის
+                        45-ე საჯარო სკოლა</p>
                     <p class="mb-2 flex items-center"><i class="fas fa-envelope mr-2"></i>istoriuliarkivi@gmail.com</p>
                     <p class="flex items-center"><i class="fas fa-phone mr-2"></i> +995 32 2 12 34 56</p>
                 </div>
             </div>
             <div class="border-t border-antique-700 mt-8 pt-6 text-center text-antique-300">
-                <p>&copy; 2023 თბილისის ისტორიული არქივი. ყველა უფლება დაცულია.</p>
-                <p class="mt-2 text-sm">ეს საიტი შექმნილია XVIII საუკუნის სტილში თანამედროვე ვებ-ტექნოლოგიების გამოყენებით.</p>
+                <p>&copy; 2026 თბილისის ისტორიული არქივი. ყველა უფლება დაცულია.</p>
+                <p class="mt-2 text-sm">ეს საიტი შექმნილია XIV - XVI საუკუნეების სტილში </p>
+                <P>საიტზე მუშაობდა ლიზა მესტოიანი. 
+                     </P>
+                     <P> 
+                        წყაროები: გამოყენებულია მე-11 კლასის მსოფლიო ისტორიის წიგნი (2 ნაწილი) და <P>ასევე ინტერნეტ-წყაროები. ასევე ხელოვნური ინტელექტი და ვიკიპედია.</P> 
+                     </P>
             </div>
         </div>
     </footer>
@@ -786,7 +1516,7 @@
             document.querySelectorAll('.page').forEach(page => {
                 page.classList.remove('active-page');
             });
-            
+
             // აჩვენე არჩეული გვერდი
             const activePage = document.getElementById(pageId + '-page');
             if (activePage) {
@@ -795,19 +1525,19 @@
                 // თუ ვერ მოიძებნა სპეციფიური გვერდი, ჩვენება მთავარი
                 document.getElementById('main-page').classList.add('active-page');
             }
-            
+
             // დახურე მობილური მენიუ
             document.getElementById('mobile-menu').classList.remove('open');
-            
+
             // გადახვევა გვერდის დასაწყისში
             window.scrollTo(0, 0);
         }
-        
+
         // გალერეის ფილტრაცია
         function filterGallery(category) {
             const items = document.querySelectorAll('.gallery-item');
             const filterBtns = document.querySelectorAll('.filter-btn');
-            
+
             // განაახლე ღილაკების სტატუსი
             filterBtns.forEach(btn => {
                 if (btn.dataset.filter === category) {
@@ -818,7 +1548,7 @@
                     btn.classList.add('bg-antique-100', 'text-antique-800', 'hover:bg-antique-200');
                 }
             });
-            
+
             // გაფილტრე სურათები
             items.forEach(item => {
                 if (category === 'all' || item.dataset.category === category) {
@@ -828,31 +1558,31 @@
                 }
             });
         }
-        
+
         // დომ კონტენტის ჩატვირთვისას
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             // ნავიგაციის ბმულების დამატება
             document.querySelectorAll('a[data-page]').forEach(link => {
-                link.addEventListener('click', function(e) {
+                link.addEventListener('click', function (e) {
                     e.preventDefault();
                     const page = this.getAttribute('data-page');
                     showPage(page);
                 });
             });
-            
+
             // გალერეის ფილტრაციის ღილაკები
             document.querySelectorAll('.filter-btn').forEach(btn => {
-                btn.addEventListener('click', function() {
+                btn.addEventListener('click', function () {
                     const category = this.getAttribute('data-filter');
                     filterGallery(category);
                 });
             });
-            
+
             // მობილური მენიუს ღილაკი
-            document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            document.getElementById('mobile-menu-button').addEventListener('click', function () {
                 const menu = document.getElementById('mobile-menu');
                 menu.classList.toggle('open');
-                
+
                 // შეცვალე ხატულა
                 const icon = this.querySelector('i');
                 if (menu.classList.contains('open')) {
@@ -863,19 +1593,20 @@
                     icon.classList.add('fa-bars');
                 }
             });
-            
+
             // საკონტაქტო ფორმის გაგზავნა
-            document.getElementById('contact-form').addEventListener('submit', function(e) {
+            document.getElementById('contact-form').addEventListener('submit', function (e) {
                 e.preventDefault();
-                
+
                 // აქ ჩასვით ფორმის გაგზავნის ლოგიკა
                 alert('შეტყობინება გაიგზავნა! მადლობთ, რომ დაგვიკავშირდით.');
                 this.reset();
             });
-            
+
             // თავდაპირველი გვერდის ჩვენება
             showPage('main');
         });
     </script>
 </body>
+
 </html>
